@@ -1,10 +1,12 @@
 import './App.css'
+import HamburgerIcon from './assets/icons/hamburger.svg';
+import LogoIcon from './assets/logo.svg';
 
 function App() {
 
   return (
     <>
-      <header></header>
+      <header className='flex items-center justify-between p-8'><img src={LogoIcon} /><img src={HamburgerIcon} /></header>
       <main>
         <section>Hey, I'm Alex Spencer and I love building beautiful websites</section>
         <section>

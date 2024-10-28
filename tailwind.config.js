@@ -5,7 +5,18 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        "rubik": ['Rubik', 'sans-serif'],
+        "ibarra": ['Ibarra Real Nova', 'sans-serif']
+      },
+      fontSize: {
+        '4xl': ['2.5rem', '2.65rem']
+      },
+      letterSpacing: {
+        tight: '-0.01em'
+      }
+    },
   },
   plugins: [],
 }

@@ -1,5 +1,6 @@
 import "./App.css";
 import HamburgerIcon from "./assets/icons/hamburger.svg";
+import DownArrowsIcon from "./assets/icons/down-arrows.svg";
 import LogoIcon from "./assets/logo.svg";
 import Image from "./assets/homepage/mobile/image-homepage-hero.jpg";
 
@@ -11,14 +12,17 @@ function App() {
         <img src={HamburgerIcon} />
       </header>
       <main>
-        <section className="flex flex-col px-8 pt-2" >
+        <section className="flex flex-col px-8 p-2">
           <img src={Image} />
-          <span className="font-ibarra font-bold text-4xl tracking-tight pt-6">
+          <span className="font-ibarra font-bold text-4xl tracking-tight pt-6 pb-[1.85rem]">
             Hey, I'm Alex Spencer and I love building beautiful websites
           </span>
+          <button className="flex items-center h-12 max-w-[12.5rem] bg-red-600">
+            <img src={DownArrowsIcon} className="px-4 py-4 bg-blue-600" />
+            <p>ABOUT ME</p>
+          </button>
         </section>
         <section>
-          <h1 className="font-rubik">About me</h1>
           <p>
             I'm a junior front-end developer looking for a new role in an
             exciting company. I focus on writing accessible HTML, using modern

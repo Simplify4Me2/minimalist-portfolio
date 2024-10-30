@@ -39,4 +39,8 @@ dist-ssr
 *.sln
 *.sw?
 
+# Ignore TypeScript build info files
+*.tsbuildinfo
+
+# Storybook files
 *storybook.log

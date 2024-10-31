@@ -12,12 +12,12 @@ function App() {
         <img src={LogoIcon} />
         <img src={HamburgerIcon} />
       </header>
-      <main>
-        <section className="flex flex-col px-8 pt-2 pb-6">
+      <main className="px-8">
+        <section className="flex flex-col pt-2 pb-6">
           <img src={HomepageImage} alt="homepage image" />
-          <span className="font-ibarra font-bold text-4xl tracking-tight pt-6 pb-[1.85rem]">
+          <h1 className="font-ibarra font-bold text-4xl tracking-tight pt-6 pb-[1.85rem]">
             Hey, I'm Alex Spencer and I love building beautiful websites
-          </span>
+          </h1>
           <button className="flex items-center h-12 max-w-[12.5rem] bg-dark-blue">
             <img src={DownArrowsIcon} className="h-full p-4 bg-dark-blue" />
             <p className="font-publicSans w-full text-white text-xs font-extralight tracking-[0.15rem]">
@@ -28,9 +28,10 @@ function App() {
         <img
           src={ProfileImage}
           alt="profile picture"
-          className="px-8 pt-[4.5rem] pb-8"
+          className="pt-[4.5rem] pb-8"
         />
-        <section className="flex flex-col px-8 border-t-[0.25px] border-solid border-light-grey">
+        <section className="flex flex-col border-t-[0.25px] border-solid border-light-grey">
+          <h1 className="font-ibarra font-bold text-4xl tracking-tight py-8">About Me</h1>
           <p>
             I'm a junior front-end developer looking for a new role in an
             exciting company. I focus on writing accessible HTML, using modern

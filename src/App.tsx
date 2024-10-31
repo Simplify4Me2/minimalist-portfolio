@@ -30,9 +30,11 @@ function App() {
           alt="profile picture"
           className="pt-[4.5rem] pb-8"
         />
-        <section className="flex flex-col border-t-[0.25px] border-solid border-light-grey">
-          <h1 className="font-ibarra font-bold text-4xl tracking-tight py-8">About Me</h1>
-          <p>
+        <section className="flex flex-col pb-[2.1rem] border-y-[0.25px] border-solid border-light-grey">
+          <h1 className="font-ibarra font-bold text-4xl tracking-tight pt-8 pb-[1.9rem]">
+            About Me
+          </h1>
+          <p className="font-publicSans leading-[1.875rem] text-left pb-1.5">
             I'm a junior front-end developer looking for a new role in an
             exciting company. I focus on writing accessible HTML, using modern
             CSS practices and writing clean JavaScript. When writing JavaScript
@@ -40,12 +42,19 @@ function App() {
             required. I'm based in London, UK, but I'm happy working remotely
             and have experience in remote teams. When I'm not coding, you'll
             find me outdoors. I love being out in nature whether that's going
-            for a walk, run or cycling. I'd love you to check ou my work.
+            for a walk, run or cycling. I'd love you to check out my work.
           </p>
+          <button className="font-publicSans text-xs tracking-[0.125rem] border-[0.5px] border-solid border-black my-4 h-12 self-start min-w-[12.65rem]">GO TO PORTFOLIO</button>
         </section>
         <section>Interested in doing a project together?</section>
       </main>
-      <footer></footer>
+      <footer>
+        <ul>
+          <li>HOME</li>
+          <li>PORTFOLIO</li>
+          <li>CONTACT ME</li>
+        </ul>
+      </footer>
     </>
   );
 }

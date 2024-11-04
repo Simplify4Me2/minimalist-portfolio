@@ -61,14 +61,14 @@ function App() {
           </Button>
         </section>
       </main>
-      <footer className="flex flex-col justify-center items-center bg-grayish-dark-blue h-[22rem] text-white">
+      <footer className="flex flex-col justify-evenly items-center bg-grayish-dark-blue h-[22rem] text-white">
         <img src={LogoIcon} className="invert" />
-        <ul>
+        <ul className="flex flex-col text-center font-publicSans text-xs font-extralight tracking-[0.15rem]">
           <li>HOME</li>
-          <li>PORTFOLIO</li>
+          <li className="my-4">PORTFOLIO</li>
           <li>CONTACT ME</li>
         </ul>
-        <ul className="flex">
+        <ul className="flex items-end gap-4">
           <li>
             <img src={GitHubIcon} className="invert" />
           </li>

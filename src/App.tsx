@@ -1,9 +1,13 @@
 import "./App.css";
 import HamburgerIcon from "./assets/icons/hamburger.svg";
 import DownArrowsIcon from "./assets/icons/down-arrows.svg";
+import GitHubIcon from "./assets/icons/github.svg";
+import TwitterIcon from "./assets/icons/twitter.svg";
+import LinkedInIcon from "./assets/icons/linkedin.svg";
 import LogoIcon from "./assets/logo.svg";
 import HomepageImage from "./assets/homepage/mobile/image-homepage-hero.jpg";
 import ProfileImage from "./assets/homepage/mobile/image-homepage-profile.jpg";
+import { Button } from "./components";
 
 function App() {
   return (
@@ -44,15 +48,36 @@ function App() {
             find me outdoors. I love being out in nature whether that's going
             for a walk, run or cycling. I'd love you to check out my work.
           </p>
-          <button className="font-publicSans text-xs tracking-[0.125rem] border-[0.5px] border-solid border-black my-4 h-12 self-start min-w-[12.65rem]">GO TO PORTFOLIO</button>
+          <Button variant="outlined" className="self-start my-4 ">
+            GO TO PORTFOLIO
+          </Button>
         </section>
-        <section>Interested in doing a project together?</section>
+        <section className="flex flex-col text-center pt-[7.2rem] pb-20">
+          <span className="font-ibarra font-bold text-4xl tracking-tight">
+            Interested in doing a project together?
+          </span>
+          <Button variant="outlined" className="mt-10 self-center">
+            CONTACT ME
+          </Button>
+        </section>
       </main>
-      <footer>
+      <footer className="flex flex-col justify-center items-center bg-grayish-dark-blue h-[22rem] text-white">
+        <img src={LogoIcon} className="invert" />
         <ul>
           <li>HOME</li>
           <li>PORTFOLIO</li>
           <li>CONTACT ME</li>
+        </ul>
+        <ul className="flex">
+          <li>
+            <img src={GitHubIcon} className="invert" />
+          </li>
+          <li>
+            <img src={TwitterIcon} className="invert" />
+          </li>
+          <li>
+            <img src={LinkedInIcon} className="invert" />
+          </li>
         </ul>
       </footer>
     </>

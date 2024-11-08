@@ -2,8 +2,6 @@ import "./App.css";
 
 import { createHashRouter, RouterProvider } from "react-router-dom";
 import { Home, Portfolio } from "./pages";
-import { Header } from "./Header";
-import { Footer } from "./Footer";
 
 const router = createHashRouter([
   {
@@ -17,13 +15,7 @@ const router = createHashRouter([
 ]);
 
 function App() {
-  return (
-    <>
-      <Header />
-      <RouterProvider router={router} />
-      <Footer />
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

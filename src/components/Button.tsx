@@ -14,6 +14,7 @@ export function Button({
 
   return (
     <button
+      role="link"
       className={`font-publicSans text-xs tracking-[0.125rem] border-[0.5px] border-solid border-black h-12 px-8 ${className}`}
     >
       {children}

@@ -38,7 +38,7 @@ export function Home() {
           outdoors. I love being out in nature whether that's going for a walk,
           run or cycling. I'd love you to check out my work.
         </p>
-        <Button variant="outlined" className="self-start my-4 ">
+        <Button variant="outlined" className="self-start my-4">
           <Link to="portfolio">GO TO PORTFOLIO</Link>
         </Button>
       </section>

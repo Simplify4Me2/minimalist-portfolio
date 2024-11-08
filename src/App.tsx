@@ -1,17 +1,17 @@
 import "./App.css";
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import { Home, Portfolio } from "./pages";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
-    path: "/minimalist-portfolio/",
+    path: "/",
     element: <Home />,
   },
   {
-    path: "/minimalist-portfolio/portfolio",
+    path: "/portfolio",
     element: <Portfolio />,
   },
 ]);

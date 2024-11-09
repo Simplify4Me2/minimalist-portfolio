@@ -5,7 +5,7 @@ import { Home, Portfolio } from "./pages";
 
 const router = createHashRouter([
   {
-    path: "/",
+    path: "/*",
     element: <Home />,
   },
   {

@@ -1,7 +1,7 @@
 import "./App.css";
 
 import { createHashRouter, RouterProvider } from "react-router-dom";
-import { Home, Portfolio } from "./pages";
+import { Home, PortfolioOverview } from "./pages";
 
 const router = createHashRouter([
   {
@@ -10,7 +10,7 @@ const router = createHashRouter([
   },
   {
     path: "/portfolio",
-    element: <Portfolio />,
+    element: <PortfolioOverview />,
   },
 ]);
 

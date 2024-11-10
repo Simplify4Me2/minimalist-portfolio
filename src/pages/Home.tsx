@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "../components";
 import HomepageImage from "./../assets/homepage/mobile/image-homepage-hero.jpg";
 import ProfileImage from "./../assets/homepage/mobile/image-homepage-profile.jpg";
@@ -7,6 +7,9 @@ import { Footer } from "../Footer";
 import { Header } from "../Header";
 
 export function Home() {
+
+  const navigate = useNavigate();
+
   return (
     <>
       <Header />
@@ -42,9 +45,9 @@ export function Home() {
             find me outdoors. I love being out in nature whether that's going
             for a walk, run or cycling. I'd love you to check out my work.
           </p>
-          <Button variant="outlined" className="self-start my-4">
-            <Link to="portfolio">GO TO PORTFOLIO</Link>
-          </Button>
+            <Button onClick={() => navigate("portfolio")} variant="outlined" className="self-start my-4">
+              GO TO PORTFOLIO
+            </Button>
         </section>
         <section className="flex flex-col text-center pt-[7.2rem] pb-20">
           <span className="font-ibarra font-bold text-4xl tracking-tight">

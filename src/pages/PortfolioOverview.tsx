@@ -5,8 +5,12 @@ import FyloImage from "../assets/portfolio/mobile/image-portfolio-fylo.jpg";
 import { Button } from "../components";
 import { Footer } from "../Footer";
 import { Header } from "../Header";
+import { useScrollToTop } from "../hooks/useScrollToTop";
 
 export function PortfolioOverview() {
+
+  useScrollToTop();
+
   return (
     <>
       <Header />

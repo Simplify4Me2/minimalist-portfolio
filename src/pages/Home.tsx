@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Button } from "../components";
 import HomepageImage from "./../assets/homepage/mobile/image-homepage-hero.jpg";
 import ProfileImage from "./../assets/homepage/mobile/image-homepage-profile.jpg";

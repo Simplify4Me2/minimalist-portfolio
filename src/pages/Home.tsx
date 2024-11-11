@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "../components";
-import HomepageImage from "./../assets/homepage/mobile/image-homepage-hero.jpg";
+import HomepageMobileImage from "./../assets/homepage/mobile/image-homepage-hero.jpg";
+import HomepageTabletImage from "./../assets/homepage/tablet/image-homepage-hero.jpg";
+import HomepageDesktopImage from "./../assets/homepage/desktop/image-homepage-hero.jpg";
 import ProfileImage from "./../assets/homepage/mobile/image-homepage-profile.jpg";
 import DownArrowsIcon from "./../assets/icons/down-arrows.svg";
 import { Footer } from "../Footer";
@@ -13,9 +15,11 @@ export function Home() {
   return (
     <>
       <Header />
-      <main className="px-8">
+      <main className="px-8 lg:px-[5.25rem] lg:pt-0">
         <section className="flex flex-col pt-2 pb-6">
-          <img src={HomepageImage} alt="homepage image" />
+          <img src={HomepageMobileImage} alt="homepage image" className="md:hidden" />
+          <img src={HomepageTabletImage} alt="homepage image" className="hidden md:block lg:hidden" />
+          <img src={HomepageDesktopImage} alt="homepage image" className="hidden lg:block" />
           <h1 className="font-ibarra font-bold text-4xl tracking-tight pt-6 pb-[1.85rem]">
             Hey, I&rsquo;m Alex Spencer and I love building beautiful websites
           </h1>

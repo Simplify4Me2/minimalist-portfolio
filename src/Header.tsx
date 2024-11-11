@@ -4,11 +4,20 @@ import { Link } from "react-router-dom";
 
 export function Header() {
   return (
-    <header className="flex items-center justify-between p-8 w-lvw">
+    <header className="flex items-center justify-between p-8 lg:py-16 lg:px-[5.25rem]">
       <Link to="/">
-        <img src={LogoIcon} />
+        <img src={LogoIcon} alt="logo" />
       </Link>
-      <img src={HamburgerIcon} />
+      <button>
+        <img src={HamburgerIcon} className="md:hidden" />
+      </button>
+      <nav className="hidden md:block">
+        <ul className="md:flex gap-[42px] font-publicSans text-xs tracking-[0.125rem]">
+          <li><Link to="/">HOME</Link></li>
+          <li><Link to="portfolio">PORTFOLIO</Link></li>
+          <li><Link to="contact">CONTACT ME</Link></li>
+        </ul>
+      </nav>
     </header>
   );
 }

@@ -9,26 +9,39 @@ import { Footer } from "../Footer";
 import { Header } from "../Header";
 
 export function Home() {
-
   const navigate = useNavigate();
 
   return (
     <>
       <Header />
       <main className="px-8 lg:px-[5.25rem] lg:pt-0">
-        <section className="flex flex-col pt-2 pb-6">
-          <img src={HomepageMobileImage} alt="homepage image" className="md:hidden" />
-          <img src={HomepageTabletImage} alt="homepage image" className="hidden md:block lg:hidden" />
-          <img src={HomepageDesktopImage} alt="homepage image" className="hidden lg:block" />
-          <h1 className="font-ibarra font-bold text-4xl tracking-tight pt-6 pb-[1.85rem]">
-            Hey, I&rsquo;m Alex Spencer and I love building beautiful websites
-          </h1>
-          <button className="flex items-center h-12 max-w-[12.5rem] bg-dark-blue">
-            <img src={DownArrowsIcon} className="h-full p-4 bg-dark-blue" />
-            <p className="font-publicSans w-full text-white text-xs font-extralight tracking-[0.15rem]">
-              ABOUT ME
-            </p>
-          </button>
+        <section className="flex flex-col pt-2 pb-6 relative">
+          <img
+            src={HomepageMobileImage}
+            alt="homepage image"
+            className="md:hidden"
+          />
+          <img
+            src={HomepageTabletImage}
+            alt="homepage image"
+            className="hidden md:block lg:hidden"
+          />
+          <img
+            src={HomepageDesktopImage}
+            alt="homepage image"
+            className="hidden lg:block"
+          />
+          <div className="md:absolute md:bg-very-light-grey md:w-3/4 md:bottom-6">
+            <h1 className="font-ibarra font-bold text-4xl tracking-tight pt-6 pb-[1.85rem] md:w-3/4">
+              Hey, I&rsquo;m Alex Spencer and I love building beautiful websites
+            </h1>
+            <button className="flex items-center h-12 w-[12.5rem] bg-dark-blue">
+              <img src={DownArrowsIcon} className="h-full p-4 bg-dark-blue" />
+              <p className="font-publicSans w-full text-white text-xs font-extralight tracking-[0.15rem]">
+                ABOUT ME
+              </p>
+            </button>
+          </div>
         </section>
         <img
           src={ProfileImage}
@@ -49,9 +62,13 @@ export function Home() {
             find me outdoors. I love being out in nature whether that's going
             for a walk, run or cycling. I'd love you to check out my work.
           </p>
-            <Button onClick={() => navigate("portfolio")} variant="outlined" className="self-start my-4">
-              GO TO PORTFOLIO
-            </Button>
+          <Button
+            onClick={() => navigate("portfolio")}
+            variant="outlined"
+            className="self-start my-4"
+          >
+            GO TO PORTFOLIO
+          </Button>
         </section>
         <section className="flex flex-col text-center pt-[7.2rem] pb-20">
           <span className="font-ibarra font-bold text-4xl tracking-tight">

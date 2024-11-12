@@ -31,8 +31,8 @@ export function Home() {
             alt="homepage image"
             className="hidden lg:block"
           />
-          <div className="md:absolute md:bg-very-light-grey md:w-3/4 md:bottom-6">
-            <h1 className="font-ibarra font-bold text-4xl tracking-tight pt-6 pb-[1.85rem] md:w-3/4">
+          <div className="md:absolute md:bg-very-light-grey md:bottom-6 md:w-3/4 lg:w-2/5 lg:h-[22.5rem] lg:flex lg:flex-col lg:justify-end">
+            <h1 className="font-ibarra font-bold text-4xl tracking-tight pt-6 pb-[1.85rem] md:w-3/4 lg:text-[3.1rem] lg:leading-[3rem] lg:w-[24.5rem] lg:py-16">
               Hey, I&rsquo;m Alex Spencer and I love building beautiful websites
             </h1>
             <button className="flex items-center h-12 w-[12.5rem] bg-dark-blue">

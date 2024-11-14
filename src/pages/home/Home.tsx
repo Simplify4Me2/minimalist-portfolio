@@ -32,7 +32,7 @@ export function Home() {
             className="hidden lg:block"
           />
           <div className="md:absolute md:bg-very-light-grey md:bottom-[5.5rem] md:w-3/4 lg:w-2/5 lg:h-[22.5rem] lg:flex lg:flex-col lg:justify-end">
-            <h1 className="font-ibarra font-bold text-4xl tracking-tight pt-6 pb-[1.85rem] md:w-3/4 lg:text-[3.1rem] lg:leading-[3rem] lg:w-[24.5rem] lg:py-16">
+            <h1 className="font-ibarra font-bold text-4xl tracking-tight pt-6 pb-[1.85rem] md:w-3/4 lg:text-[3.1rem] lg:leading-[3.1rem] lg:w-[24.5rem] lg:pt-16 lg:pb-14 lg:tracking-normal">
               Hey, I&rsquo;m Alex Spencer and I love building beautiful websites
             </h1>
             <button className="flex items-center h-12 w-[12.5rem] bg-dark-blue">
@@ -43,7 +43,7 @@ export function Home() {
             </button>
           </div>
         </section>
-        <section className="flex flex-col lg:flex-row pt-2 pb-[3.3rem] border-b-[0.25px] border-solid border-light-grey">
+        <section className="flex flex-col lg:flex-row pt-2 pb-[3.3rem">
           <img
             src={ProfileMobileImage}
             alt="homepage image"
@@ -59,25 +59,34 @@ export function Home() {
             alt="homepage image"
             className="hidden lg:block"
           />
-          <hr className="my-8 border-y-[0.25px] border-solid border-light-grey" />
-          <h1 className="font-ibarra font-bold text-4xl tracking-tight pb-6">
-            About Me
-          </h1>
-          <p className="font-publicSans leading-[1.875rem] text-left pt-[0.25rem] pb-1.5 min-h-[11.75rem]">
-            I'm a junior front-end developer looking for a new role in an
-            exciting company. I focus on writing accessible HTML, using modern
-            CSS practices and writing clean JavaScript. When writing JavaScript
-            code, I mostly use React, but I can adapt to whatever tools are
-            required. I'm based in London, UK, but I'm happy working remotely
-            and have experience in remote teams. When I'm not coding, you'll
-            find me outdoors. I love being out in nature whether that's going
-            for a walk, run or cycling. I'd love you to check out my work.
-          </p>
-          <Button variant="outlined" className="mt-4 self-start">
-            GO TO PORTFOLIO
+          <div className="border-y-[0.25px] border-solid border-light-grey my-8 pt-8 pb-12">
+            <h1 className="font-ibarra font-bold text-4xl tracking-tight pb-6">
+              About Me
+            </h1>
+            <p className="font-publicSans leading-[1.875rem] text-left pt-[0.25rem] pb-1.5 min-h-[11.75rem]">
+              I'm a junior front-end developer looking for a new role in an
+              exciting company. I focus on writing accessible HTML, using modern
+              CSS practices and writing clean JavaScript. When writing
+              JavaScript code, I mostly use React, but I can adapt to whatever
+              tools are required. I'm based in London, UK, but I'm happy working
+              remotely and have experience in remote teams. When I'm not coding,
+              you'll find me outdoors. I love being out in nature whether that's
+              going for a walk, run or cycling. I'd love you to check out my
+              work.
+            </p>
+            <Button variant="outlined" className="mt-4 self-start">
+              GO TO PORTFOLIO
+            </Button>
+          </div>
+        </section>
+        <section className="flex flex-col text-center pt-[5.5rem] pb-20">
+          <span className="font-ibarra font-bold text-4xl tracking-tight">
+            Interested in doing a project together?
+          </span>
+          <Button variant="outlined" className="mt-10 self-center">
+            CONTACT ME
           </Button>
         </section>
-        <ContactMeSection />
       </main>
       <Footer />
     </>

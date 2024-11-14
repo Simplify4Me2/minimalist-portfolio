@@ -79,14 +79,7 @@ export function Home() {
             </Button>
           </div>
         </section>
-        <section className="flex flex-col text-center pt-[5.5rem] pb-20">
-          <span className="font-ibarra font-bold text-4xl tracking-tight">
-            Interested in doing a project together?
-          </span>
-          <Button variant="outlined" className="mt-10 self-center">
-            CONTACT ME
-          </Button>
-        </section>
+        <ContactMeSection className={"pt-[5.5rem] pb-20"} />
       </main>
       <Footer />
     </>

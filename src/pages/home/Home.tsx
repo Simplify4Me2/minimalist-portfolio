@@ -43,7 +43,7 @@ export function Home() {
             </button>
           </div>
         </section>
-        <section className="flex flex-col lg:flex-row pt-2 pb-[3.3rem lg:pt-16">
+        <section className="flex flex-col lg:flex-row lg:justify-between pt-2 pb-[3.3rem lg:pt-16">
           <img
             src={ProfileMobileImage}
             alt="homepage image"
@@ -59,7 +59,7 @@ export function Home() {
             alt="homepage image"
             className="hidden lg:block"
           />
-          <div className="border-y-[0.25px] border-solid border-light-grey my-8 pt-8 pb-12 lg:flex lg:flex-col lg:flex-start lg:mt-0">
+          <div className="border-y-[0.25px] border-solid border-light-grey my-8 pt-8 pb-12 lg:flex lg:flex-col lg:mx-20 lg:mb-0 lg:pt-12 lg:pb-0 lg:mt-0 lg:w-[22.5rem]">
             <h1 className="font-ibarra font-bold text-4xl tracking-tight pb-6">
               About Me
             </h1>

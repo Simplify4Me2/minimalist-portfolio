@@ -5,7 +5,6 @@ import HomepageDesktopImage from "./../../assets/homepage/desktop/image-homepage
 import ProfileMobileImage from "./../../assets/homepage/mobile/image-homepage-profile.jpg";
 import ProfileTabletImage from "./../../assets/homepage/tablet/image-homepage-profile.jpg";
 import ProfileDesktopImage from "./../../assets/homepage/desktop/image-homepage-profile.jpg";
-import DownArrowsIcon from "./../../assets/icons/down-arrows.svg";
 import { Footer } from "../../Footer";
 import { Header } from "../../Header";
 import { ContactMeSection } from "./ContactMeSection";
@@ -14,8 +13,8 @@ export function Home() {
   return (
     <>
       <Header />
-      <main className="px-8 lg:px-[5.25rem] lg:pt-0">
-        <section className="flex flex-col pt-2 pb-[5.5rem] relative lg:pt-[0.3rem]">
+      <main className="max-w-screen-md lg:max-w-screen-xl px-8 md:px-10 lg:px-[5.25rem] lg:pt-0">
+        <section className="flex flex-col pt-2 md:pt-0 pb-[5.5rem] relative lg:pt-[0.3rem]">
           <img
             src={HomepageMobileImage}
             alt="homepage image"
@@ -31,16 +30,17 @@ export function Home() {
             alt="homepage image"
             className="hidden lg:block"
           />
-          <div className="md:absolute md:bg-very-light-grey md:bottom-[5.5rem] md:w-3/4 lg:w-2/5 lg:h-[22.5rem] lg:flex lg:flex-col lg:justify-end">
+          {/* <div className="md:absolute md:bg-very-light-grey md:bottom-[5.5rem] md:w-3/4 lg:w-2/5 md:h-[17.5rem] lg:h-[22.5rem] lg:flex lg:flex-col lg:justify-end">
             <h1 className="font-ibarra font-bold text-4xl tracking-tight pt-6 pb-[1.85rem] md:w-3/4 lg:text-[3.1rem] lg:leading-[3.1rem] lg:w-[24.5rem] lg:pt-16 lg:pb-14 lg:tracking-normal">
               Hey, I&rsquo;m Alex Spencer and I love building beautiful websites
             </h1>
-            <button className="flex items-center h-12 w-[12.5rem] bg-dark-blue">
-              <img src={DownArrowsIcon} className="h-full p-4 bg-dark-blue" />
-              <p className="font-publicSans w-full text-white text-xs font-extralight tracking-[0.15rem]">
-                ABOUT ME
-              </p>
-            </button>
+            <Button variant="contained">ABOUT ME</Button>
+          </div> */}
+          <div className="flex flex-col justify-end bg-very-light-grey md:absolute md:bottom-[5.5rem] md:w-3/4 lg:w-2/5 md:h-[17.5rem] lg:h-[22.5rem]">
+            <h1 className="font-ibarra font-bold text-4xl tracking-tight grow pt-6 md:pt-14 pb-[1.85rem] max-w-md md:w-3/4 lg:text-[3.1rem] lg:leading-[3.1rem] lg:w-[24.5rem] lg:pt-16 lg:pb-14 lg:tracking-normal">
+              Hey, I&rsquo;m Alex Spencer and I love building beautiful websites
+            </h1>
+            <Button variant="contained">ABOUT ME</Button>
           </div>
         </section>
         <section className="flex flex-col lg:flex-row lg:justify-between pt-2 pb-[3.3rem lg:pt-16">

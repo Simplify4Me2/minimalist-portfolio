@@ -14,8 +14,8 @@ export function Header() {
       <nav className="hidden md:block">
         <ul className="md:flex gap-[42px] font-publicSans text-xs tracking-[0.125rem]">
           <li><Link to="/">HOME</Link></li>
-          <li><Link to="portfolio">PORTFOLIO</Link></li>
-          <li><Link to="contact">CONTACT ME</Link></li>
+          <li><Link to="/portfolio">PORTFOLIO</Link></li>
+          <li><Link to="/contact">CONTACT ME</Link></li>
         </ul>
       </nav>
     </header>

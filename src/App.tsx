@@ -1,7 +1,7 @@
 import "./App.css";
 
 import { createHashRouter, RouterProvider } from "react-router-dom";
-import { Home, PortfolioOverview } from "./pages";
+import { Contact, Home, PortfolioOverview } from "./pages";
 
 const router = createHashRouter([
   {
@@ -11,6 +11,10 @@ const router = createHashRouter([
   {
     path: "/portfolio",
     element: <PortfolioOverview />,
+  },
+  {
+    path: "/contact",
+    element: <Contact />,
   },
 ]);
 

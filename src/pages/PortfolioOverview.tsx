@@ -3,8 +3,6 @@ import BookmarkImage from "../assets/portfolio/mobile/image-portfolio-bookmark.j
 import InsureImage from "../assets/portfolio/mobile/image-portfolio-insure.jpg";
 import FyloImage from "../assets/portfolio/mobile/image-portfolio-fylo.jpg";
 import { Button } from "../components";
-import { Footer } from "../Footer";
-import { Header } from "../Header";
 import { useScrollToTop } from "../hooks/useScrollToTop";
 
 export function PortfolioOverview() {
@@ -13,7 +11,6 @@ export function PortfolioOverview() {
 
   return (
     <>
-      <Header />
       <main className="px-8">
         <section className="flex flex-col pt-2 pb-6 border-b-[0.25px] border-solid border-light-grey mb-16">
           <img src={ManageImage} />
@@ -88,7 +85,6 @@ export function PortfolioOverview() {
           </Button>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

@@ -5,21 +5,6 @@ import { Contact, Home, PortfolioOverview } from "./pages";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 
-// const router = createHashRouter([
-//   {
-//     path: "/*",
-//     element: <Home />,
-//   },
-//   {
-//     path: "/portfolio",
-//     element: <PortfolioOverview />,
-//   },
-//   {
-//     path: "/contact",
-//     element: <Contact />,
-//   },
-// ]);
-
 function App() {
   return (
     <HashRouter>

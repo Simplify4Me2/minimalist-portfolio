@@ -81,13 +81,13 @@ interface MobileMenuProps {
 function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   return (
     <div
-      className={`absolute top-full right-0 mt-2 w-48 bg-black text-white rounded-lg shadow-lg z-10 transition-opacity duration-300 ${
+      className={`absolute top-full flex justify-center text-center p-6 right-0 mr-8 mt-[-0.5rem] w-56 bg-grayish-dark-blue text-xs font-extralight tracking-[0.15rem] text-white shadow-lg z-10 transition-opacity duration-300 ${
         isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
       role="menu"
       aria-hidden={!isOpen}
     >
-      <ul className="flex flex-col gap-4 p-4 text-sm font-publicSans">
+      <ul className="flex flex-col gap-6 p-4 text-sm font-publicSans">
         <li>
           <Link to="/" onClick={onClose}>
             HOME

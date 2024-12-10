@@ -87,7 +87,7 @@ function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       role="menu"
       aria-hidden={!isOpen}
     >
-      <ul className="flex flex-col gap-6 p-4 text-sm font-publicSans">
+      <ul className="flex flex-col gap-7 p-4 text-xs font-publicSans">
         <li>
           <Link to="/" onClick={onClose}>
             HOME

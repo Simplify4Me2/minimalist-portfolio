@@ -1,4 +1,5 @@
-import { Section, SocialMediaNav } from "../../components";
+import { PropsWithChildren } from "react";
+import { SectionHeader, SocialMediaNav } from "../../components";
 import { useScrollToTop } from "../../hooks";
 
 export function Contact() {
@@ -20,8 +21,34 @@ export function Contact() {
           </p>
           <SocialMediaNav />
         </Section>
+        <section className="flex flex-col pt-8 pb-48 font-sans font-bold text-xs tracking-wide">
+          <SectionHeader>Contact Me</SectionHeader>
+          <label className="mt-[1.9rem] mb-4">Name</label>
+          <input type="text" className="bg-light-grey h-12" />
+        </section>
       </main>
     </>
   );
 }
 
+interface SectionProps {
+  title: string;
+  className?: string;
+}
+
+function Section({
+  title,
+  children,
+  className,
+}: PropsWithChildren<SectionProps>) {
+  return (
+    <section
+      className={`flex flex-col md:flex-row lg:justify-between pt-2 lg:pt-16 ${className}`}
+    >
+      <div className="flex flex-col border-y-[0.25px] border-solid border-grayish-dark-blue/15 pt-6 md:pt-12 pb-8 md:my-0 md:ml-[4.25rem] lg:mx-20 lg:pt-12 lg:w-[22.5rem]">
+        <SectionHeader className="pb-5">{title}</SectionHeader>
+        {children}
+      </div>
+    </section>
+  );
+}

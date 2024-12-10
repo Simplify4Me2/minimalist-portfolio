@@ -1,8 +1,6 @@
 import LogoIcon from "./assets/logo.svg";
-import GitHubIcon from "./assets/icons/github.svg";
-import TwitterIcon from "./assets/icons/twitter.svg";
-import LinkedInIcon from "./assets/icons/linkedin.svg";
 import { Link } from "react-router-dom";
+import { SocialMediaNav } from "./components";
 
 export function Footer() {
   return (
@@ -24,20 +22,10 @@ export function Footer() {
             </li>
           </ul>
         </nav>
-        <nav>
-          <ul className="flex gap-4 lg:items-center">
-            <li>
-              <img src={GitHubIcon} className="invert" />
-            </li>
-            <li>
-              <img src={TwitterIcon} className="invert" />
-            </li>
-            <li>
-              <img src={LinkedInIcon} className="invert" />
-            </li>
-          </ul>
-        </nav>
+        <SocialMediaNav inverted />
       </div>
     </footer>
   );
 }
+
+

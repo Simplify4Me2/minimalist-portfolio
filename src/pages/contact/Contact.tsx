@@ -1,5 +1,5 @@
 import { PropsWithChildren } from "react";
-import { SectionHeader, SocialMediaNav } from "../../components";
+import { Button, SectionHeader, SocialMediaNav } from "../../components";
 import { useScrollToTop } from "../../hooks";
 
 export function Contact() {
@@ -21,10 +21,17 @@ export function Contact() {
           </p>
           <SocialMediaNav />
         </Section>
-        <section className="flex flex-col pt-8 pb-48 font-sans font-bold text-xs tracking-wide">
+        <section className="flex flex-col pt-8 pb-16 font-sans font-bold text-xs tracking-wide">
           <SectionHeader>Contact Me</SectionHeader>
-          <label className="mt-[1.9rem] mb-4">Name</label>
-          <input type="text" className="bg-light-grey h-12" />
+          <form className="flex flex-col mt-[0.9rem]">
+            <label className="text-[0.8rem] text-grayish-dark-blue my-4">Name</label>
+            <input type="text" className="bg-light-grey h-12 mb-4" />
+            <label className="text-[0.8rem] text-grayish-dark-blue my-4">Email Address</label>
+            <input type="text" className="bg-light-grey h-12 mb-4" />
+            <label className="text-[0.8rem] text-grayish-dark-blue my-4">Message</label>
+            <textarea className="bg-light-grey h-24 mb-4" placeholder="How can I help?" />
+            <Button variant="contained">SEND MESSAGE</Button>
+          </form>
         </section>
       </main>
     </>

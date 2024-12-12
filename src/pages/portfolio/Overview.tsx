@@ -1,11 +1,13 @@
-import ManageImage from "../assets/portfolio/mobile/image-portfolio-manage.jpg";
-import BookmarkImage from "../assets/portfolio/mobile/image-portfolio-bookmark.jpg";
-import InsureImage from "../assets/portfolio/mobile/image-portfolio-insure.jpg";
-import FyloImage from "../assets/portfolio/mobile/image-portfolio-fylo.jpg";
-import { Button } from "../components";
-import { useScrollToTop } from "../hooks/useScrollToTop";
+import ManageImage from "../../assets/portfolio/mobile/image-portfolio-manage.jpg";
+import BookmarkImage from "../../assets/portfolio/mobile/image-portfolio-bookmark.jpg";
+import InsureImage from "../../assets/portfolio/mobile/image-portfolio-insure.jpg";
+import FyloImage from "../../assets/portfolio/mobile/image-portfolio-fylo.jpg";
+import { Button } from "../../components";
+import { useScrollToTop } from "../../hooks/useScrollToTop";
+import { useNavigate } from "react-router-dom";
 
-export function PortfolioOverview() {
+export function Overview() {
+  const navigate = useNavigate();
 
   useScrollToTop();
 
@@ -24,7 +26,7 @@ export function PortfolioOverview() {
             JavaScript for the areas that required interactivity, such as the
             testimonial slider.
           </p>
-          <Button variant="outlined" className="mt-4 self-start">
+          <Button variant="outlined" className="mt-4 self-start" onClick={() => navigate("manage")}>
             VIEW PROJECT
           </Button>
         </section>
@@ -40,7 +42,7 @@ export function PortfolioOverview() {
             JavaScript for the areas that required interactivity, such as the
             features section.
           </p>
-          <Button variant="outlined" className="mt-4 self-start">
+          <Button variant="outlined" className="mt-4 self-start" onClick={() => navigate("bookmark")}>
             VIEW PROJECT
           </Button>
         </section>
@@ -56,7 +58,7 @@ export function PortfolioOverview() {
             this project required was to enable the toggling of the mobile
             navigation.
           </p>
-          <Button variant="outlined" className="mt-4 self-start">
+          <Button variant="outlined" className="mt-4 self-start" onClick={() => navigate("insure")}>
             VIEW PROJECT
           </Button>
         </section>
@@ -72,7 +74,7 @@ export function PortfolioOverview() {
             fully&#8209;responsive. I took a mobile&#8209;first approach and
             used modern CSS like Flexbox and Grid for layout purposes.
           </p>
-          <Button variant="outlined" className="mt-4 self-start">
+          <Button variant="outlined" className="mt-4 self-start" onClick={() => navigate("fylo")}>
             VIEW PROJECT
           </Button>
         </section>

@@ -11,7 +11,7 @@ export function IntroductionSection() {
         <SectionHeader className="grow pt-6 md:pt-14 pb-[1.85rem] max-w-md md:w-3/4 lg:text-[3.1rem] lg:leading-[3.1rem] lg:w-[24.5rem] lg:pt-16 lg:pb-14 lg:tracking-normal">
           Hey, I&rsquo;m Alex Spencer and I love building beautiful websites
         </SectionHeader>
-        <Button variant="contained">ABOUT ME</Button>
+        <Button variant="contained-with-down-arrow">ABOUT ME</Button>
       </div>
     </section>
   );

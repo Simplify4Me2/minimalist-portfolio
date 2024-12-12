@@ -2,7 +2,7 @@ import { PropsWithChildren } from "react";
 import DownArrowsIcon from "./../assets/icons/down-arrows.svg";
 
 interface IButtonProps {
-  variant: "contained" | "outlined";
+  variant: "contained" | "contained-with-down-arrow" | "outlined";
   className?: string;
   onClick?: () => void;
 }
@@ -13,10 +13,19 @@ export function Button({
   className,
   onClick,
 }: PropsWithChildren<IButtonProps>) {
-  if (variant === "contained")
+  if (variant === "contained-with-down-arrow")
     return (
       <button className="flex items-center h-12 w-[12.5rem] bg-dark-blue">
         <img src={DownArrowsIcon} className="h-full p-4 bg-dark-blue" />
+        <p className="font-publicSans w-full text-white text-xs font-extralight tracking-[0.15rem]">
+          {children}
+        </p>
+      </button>
+    );
+
+  if (variant === "contained")
+    return (
+      <button className="flex items-center h-12 w-[12.5rem] bg-dark-blue">
         <p className="font-publicSans w-full text-white text-xs font-extralight tracking-[0.15rem]">
           {children}
         </p>

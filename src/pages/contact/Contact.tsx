@@ -25,11 +25,11 @@ export function Contact() {
           <SectionHeader>Contact Me</SectionHeader>
           <form className="flex flex-col mt-[0.9rem]">
             <label className="text-[0.8rem] text-grayish-dark-blue my-4">Name</label>
-            <input type="text" className="bg-light-grey h-12 mb-4" />
+            <input type="text" className="bg-light-grey h-12 mb-4 p-4 placeholder:opacity-40" placeholder="Jane Appleseed" />
             <label className="text-[0.8rem] text-grayish-dark-blue my-4">Email Address</label>
-            <input type="text" className="bg-light-grey h-12 mb-4" />
+            <input type="text" className="bg-light-grey h-12 mb-4 p-4 placeholder:opacity-40" placeholder="email@example.com" />
             <label className="text-[0.8rem] text-grayish-dark-blue my-4">Message</label>
-            <textarea className="bg-light-grey h-24 mb-4" placeholder="How can I help?" />
+            <textarea className="bg-light-grey h-24 mb-4 p-4 placeholder:opacity-40" placeholder="How can I help?" />
             <Button variant="contained">SEND MESSAGE</Button>
           </form>
         </section>

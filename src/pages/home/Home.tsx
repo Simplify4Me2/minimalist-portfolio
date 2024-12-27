@@ -3,7 +3,7 @@ import { AboutMeSection } from "./AboutMeSection";
 import { IntroductionSection } from "./IntroductionSection";
 import { useScrollToTop } from "../../hooks";
 
-export function Home() {
+function Home() {
 
   useScrollToTop();
 
@@ -17,3 +17,5 @@ export function Home() {
     </>
   );
 }
+
+export default Home;

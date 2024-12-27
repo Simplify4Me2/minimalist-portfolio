@@ -1,9 +1,14 @@
 import "./App.css";
 
 import { HashRouter, Outlet, Route, Routes } from "react-router-dom";
-import { Bookmark, Contact, Fylo, Home, Insure, Manage, Overview } from "./pages";
+import { Bookmark, Fylo, Insure, Manage } from "./pages";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import { lazy } from "react";
+
+const Home = lazy(() => import("./pages/home/Home"));
+const Overview = lazy(() => import("./pages/portfolio/Overview"));
+const Contact = lazy(() => import("./pages/contact/Contact"));
 
 function App() {
   return (

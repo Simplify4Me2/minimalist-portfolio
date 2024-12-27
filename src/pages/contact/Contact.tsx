@@ -2,7 +2,7 @@ import { PropsWithChildren } from "react";
 import { Button, SectionHeader, SocialMediaNav } from "../../components";
 import { useScrollToTop } from "../../hooks";
 
-export function Contact() {
+function Contact() {
   useScrollToTop();
 
   return (
@@ -59,3 +59,5 @@ function Section({
     </section>
   );
 }
+
+export default Contact;

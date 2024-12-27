@@ -6,7 +6,7 @@ import { Button } from "../../components";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import { useNavigate } from "react-router-dom";
 
-export function Overview() {
+function Overview() {
   const navigate = useNavigate();
 
   useScrollToTop();
@@ -90,3 +90,5 @@ export function Overview() {
     </>
   );
 }
+
+export default Overview;

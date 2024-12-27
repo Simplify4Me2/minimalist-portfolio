@@ -34,7 +34,7 @@ export function Manage() {
 
         <section className="pt-11">
           <h1 className="font-ibarra text-[2rem]">Project Background</h1>
-          <p className="font-publicSans tracking-tight text-[0.95rem] leading-[1.875rem] text-left pt-6 pb-6 min-h-[11.75rem]">
+          <TextBlock>
             This project was a front-end challenge from Frontend Mentor. It's a
             platform that enables you to practice building websites to a design
             and project brief. Each challenge includes mobile and desktop
@@ -42,7 +42,7 @@ export function Manage() {
             sizes. Creating these projects has helped me refine my workflow and
             solve real-world coding problems. I've learned semothing new with
             each project, helping me to improve and adapt my style.
-          </p>
+          </TextBlock>
         </section>
 
         <section className="pt-3">
@@ -54,19 +54,8 @@ export function Manage() {
         </section>
       </main>
 
-      <nav className="flex w-full px-6 mt-12 ">
-        <Link to={"/portfolio/fylo"} className="flex-1 border-black border-grayish-dark-blue/[.15] border-y-[1px]">
-          <img src={ArrowLeft} className="pt-[1.4rem] pb-4" />
-          <p className="font-serif text-3xl">Fylo</p>
-          <p className="font-sans tracking-wide pt-1 pb-6">Previous Project</p>
-        </Link>
-        <span className="border-l-[1px] border-grayish-dark-blue/[.15]"></span>
-        <Link to={"/portfolio/bookmark"} className="flex-1 flex flex-col text-right border-grayish-dark-blue/[.15] border-solid border-y-[1px]">
-          <img src={ArrowRight} className="self-end pt-[1.4rem] pb-4" />
-          <p className="font-serif text-3xl">Bookmark</p>
-          <p className="font-sans tracking-wide pt-1 pb-6">Next Project</p>
-        </Link>
-      </nav>
+      <ProjectNavigation />
+      
 
       <section
         className={`flex flex-col md:flex-row mt-16 mb-20 px-8 md:justify-between md:items-center md:mt-2 md:mb-4 text-center`}
@@ -106,4 +95,38 @@ function Section({
       </div>
     </section>
   );
+}
+
+type TextBlockProps = {
+  className?: string;
+}
+
+function TextBlock({ children, className }: PropsWithChildren<TextBlockProps>) {
+  return (
+    <p className={`font-publicSans tracking-tight text-[0.95rem] leading-[1.875rem] text-left pt-6 pb-6 min-h-[11.75rem] ${className}`}>
+      {children}
+    </p>
+  );
+}
+
+function ProjectNavigation() {
+  return <nav className="flex w-full px-6 mt-12 ">
+  <Link
+    to={"/portfolio/fylo"}
+    className="flex-1 border-black border-grayish-dark-blue/[.15] border-y-[1px]"
+  >
+    <img src={ArrowLeft} className="pt-[1.4rem] pb-4" />
+    <p className="font-serif text-3xl">Fylo</p>
+    <p className="font-sans tracking-wide pt-1 pb-6">Previous Project</p>
+  </Link>
+  <span className="border-l-[1px] border-grayish-dark-blue/[.15]"></span>
+  <Link
+    to={"/portfolio/bookmark"}
+    className="flex-1 flex flex-col text-right border-grayish-dark-blue/[.15] border-solid border-y-[1px]"
+  >
+    <img src={ArrowRight} className="self-end pt-[1.4rem] pb-4" />
+    <p className="font-serif text-3xl">Bookmark</p>
+    <p className="font-sans tracking-wide pt-1 pb-6">Next Project</p>
+  </Link>
+</nav>
 }

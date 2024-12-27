@@ -1,6 +1,9 @@
 export { BookmarkHeroImage } from "./BookmarkHeroImage";
 export { BookmarkFirstPreviewImage } from "./BookmarkFirstPreviewImage";
 export { BookmarkSecondPreviewImage } from "./BookmarkSecondPreviewImage";
+export { InsureHeroImage } from "./InsureHeroImage";
+export { InsureFirstPreviewImage } from "./InsureFirstPreviewImage";
+export { InsureSecondPreviewImage } from "./InsureSecondPreviewImage";
 export { ManageImage } from "./ManageImage";
 export { ManageHeroImage } from "./ManageHeroImage";
 export { ManageFirstPreviewImage } from "./ManageFirstPreviewImage";

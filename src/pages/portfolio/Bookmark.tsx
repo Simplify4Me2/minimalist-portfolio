@@ -1,9 +1,7 @@
 import { PropsWithChildren } from "react";
-import { Button, SectionHeader, TextBlock } from "../../components";
-import ArrowLeft from "../../assets/icons/arrow-left.svg";
-import ArrowRight from "../../assets/icons/arrow-right.svg";
-import { Link } from "react-router-dom";
+import { Button, PortfolioNavigation, SectionHeader, TextBlock } from "../../components";
 import { BookmarkFirstPreviewImage, BookmarkHeroImage, BookmarkSecondPreviewImage } from "../../images";
+import { ContactMeSection } from "../ContactMeSection";
 
 export function Bookmark() {
     return <>
@@ -49,34 +47,14 @@ export function Bookmark() {
       </section>
     </main>
 
-    <nav className="flex w-full px-6 mt-12 ">
-      <Link to={"/portfolio/manage"} className="flex-1 border-black border-grayish-dark-blue/[.15] border-y-[1px]">
-        <img src={ArrowLeft} className="pt-[1.4rem] pb-4" />
-        <p className="font-serif text-3xl">Manage</p>
-        <p className="font-sans tracking-wide pt-1 pb-6">Previous Project</p>
-      </Link>
-      <span className="border-l-[1px] border-grayish-dark-blue/[.15]"></span>
-      <Link to={"/portfolio/insure"} className="flex-1 flex flex-col text-right border-grayish-dark-blue/[.15] border-solid border-y-[1px]">
-        <img src={ArrowRight} className="self-end pt-[1.4rem] pb-4" />
-        <p className="font-serif text-3xl">Insure</p>
-        <p className="font-sans tracking-wide pt-1 pb-6">Next Project</p>
-      </Link>
-    </nav>
+    <PortfolioNavigation
+            previousProject="Manage"
+            previousProjectLink="/portfolio/manage"
+            nextProject="Insure"
+            nextProjectLink="/portfolio/insure"
+          />
 
-    <section
-      className={`flex flex-col md:flex-row mt-16 mb-20 px-8 md:justify-between md:items-center md:mt-2 md:mb-4 text-center`}
-    >
-      <span className="font-ibarra font-bold text-4xl tracking-tight md:w-[20.5rem] md:text-left md:mr-6 lg:mr-0">
-        Interested in doing a project together?
-      </span>
-      <hr className="hidden md:block md:w-28 lg:w-[35rem] mt-8 mb-6 border-y-[0.25px] border-solid border-grayish-dark-blue/15" />
-      <Button
-        variant="outlined"
-        className="mt-10 md:mt-0 self-center text-nowrap"
-      >
-        CONTACT ME
-      </Button>
-    </section>
+    <ContactMeSection className="mt-16 mb-20 px-8" />
   </>
 }
 

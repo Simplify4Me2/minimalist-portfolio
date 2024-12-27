@@ -1,7 +1,7 @@
 import { PropsWithChildren } from "react";
 import {
   Button,
-  ProjectNavigation,
+  PortfolioNavigation,
   SectionHeader,
   TextBlock,
 } from "../../components";
@@ -34,7 +34,7 @@ export function Manage() {
             VISIT WEBSITE
           </Button>
         </Section>
-
+        
         <section className="pt-11">
           <h1 className="font-ibarra text-[2rem]">Project Background</h1>
           <TextBlock>
@@ -56,16 +56,14 @@ export function Manage() {
           </div>
         </section>
       </main>
-
-      <ProjectNavigation
+      
+      <PortfolioNavigation
         previousProject="Fylo"
         previousProjectLink="/portfolio/fylo"
         nextProject="Bookmark"
         nextProjectLink="/portfolio/bookmark"
       />
-
-    <ContactMeSection className="mt-16 mb-20 px-8" />
-
+      <ContactMeSection className="mt-16 mb-20 px-8" />
     </>
   );
 }

@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 import ArrowLeft from "../assets/icons/arrow-left.svg";
 import ArrowRight from "../assets/icons/arrow-right.svg";
 
-type ProjectNavigationProps = {
+type PortfolioNavigationProps = {
     previousProject: string;
     previousProjectLink: string;
     nextProject: string;
     nextProjectLink: string;
 }
 
-export function ProjectNavigation({ previousProject, previousProjectLink, nextProject, nextProjectLink }: ProjectNavigationProps) {
+export function PortfolioNavigation({ previousProject, previousProjectLink, nextProject, nextProjectLink }: PortfolioNavigationProps) {
     return <nav className="flex w-full px-6 mt-12 ">
     <Link
       to={previousProjectLink}

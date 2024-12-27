@@ -1,5 +1,5 @@
 import { PropsWithChildren } from "react";
-import { Button, SectionHeader } from "../../components";
+import { Button, SectionHeader, TextBlock } from "../../components";
 import ArrowLeft from "../../assets/icons/arrow-left.svg";
 import ArrowRight from "../../assets/icons/arrow-right.svg";
 import { Link } from "react-router-dom";
@@ -29,7 +29,7 @@ export function Bookmark() {
 
       <section className="pt-11">
         <h1 className="font-ibarra text-[2rem]">Project Background</h1>
-        <p className="font-publicSans tracking-tight text-[0.95rem] leading-[1.875rem] text-left pt-6 pb-6 min-h-[11.75rem]">
+        <TextBlock>
           This project was a front-end challenge from Frontend Mentor. It's a
           platform that enables you to practice building websites to a design
           and project brief. Each challenge includes mobile and desktop
@@ -37,7 +37,7 @@ export function Bookmark() {
           sizes. Creating these projects has helped me refine my workflow and
           solve real-world coding problems. I've learned semothing new with
           each project, helping me to improve and adapt my style.
-        </p>
+        </TextBlock>
       </section>
 
       <section className="pt-3">

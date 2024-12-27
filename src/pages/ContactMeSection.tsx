@@ -1,7 +1,7 @@
-import { Button } from "../../components";
+import { Button } from "../components";
 
 type ContactMeSectionProps = {
-  className: string;
+  className?: string;
 }
 
 export function ContactMeSection({ className } : ContactMeSectionProps) {

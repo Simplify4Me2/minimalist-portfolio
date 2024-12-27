@@ -1,4 +1,4 @@
-import { ContactMeSection } from "./ContactMeSection";
+import { ContactMeSection } from "../ContactMeSection";
 import { AboutMeSection } from "./AboutMeSection";
 import { IntroductionSection } from "./IntroductionSection";
 import { useScrollToTop } from "../../hooks";

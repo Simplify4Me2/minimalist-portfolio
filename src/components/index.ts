@@ -1,3 +1,5 @@
 export { Button } from "./Button";
-export { SectionHeader } from "./SectionHeader";
+export { ProjectNavigation } from "./ProjectNavigation";
+export { default as SectionHeader } from "./SectionHeader";
 export { SocialMediaNav } from "./SocialMediaNav";
+export { TextBlock } from "./TextBlock";

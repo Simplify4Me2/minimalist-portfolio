@@ -7,16 +7,18 @@ interface SocialMediaNavProps {
 }
 
 export function SocialMediaNav({ inverted = false }: SocialMediaNavProps) {
+  const iconClass = inverted ? "invert" : "";
+
     return <nav>
     <ul className="flex gap-4 lg:items-center">
       <li>
-        <img src={GitHubIcon} className={`${inverted && "invert"}`} />
+        <img src={GitHubIcon} className={iconClass} />
       </li>
       <li>
-        <img src={TwitterIcon} className={`${inverted && "invert"}`} />
+        <img src={TwitterIcon} className={iconClass} />
       </li>
       <li>
-        <img src={LinkedInIcon} className={`${inverted && "invert"}`} />
+        <img src={LinkedInIcon} className={iconClass} />
       </li>
     </ul>
   </nav>

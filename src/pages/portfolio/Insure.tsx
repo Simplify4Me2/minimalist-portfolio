@@ -20,7 +20,7 @@ export function Insure() {
         <Section title="Insure">
           <p className="font-publicSans tracking-tight text-[0.95rem] leading-[1.875rem] text-left pt-[0.25rem] pr-2 pb-6 min-h-[11.75rem]">
             This was a small project which mostly consisted of HTML and CSS. I
-            built a fully&#8211;responsive landing page. The only JavaScript this
+            built a fully&#8209;responsive landing page. The only JavaScript this
             project required was to enable the toggling of the mobile
             navigation.
           </p>
@@ -37,13 +37,13 @@ export function Insure() {
 
         <section className="pt-11">
           <h1 className="font-ibarra text-[2rem]">Project Background</h1>
-          <TextBlock>
+          <TextBlock tracking="tight" fontSize="[0.95rem]">
             This project was a front-end challenge from Frontend Mentor. It's a
             platform that enables you to practice building websites to a design
             and project brief. Each challenge includes mobile and desktop
             designs to show how the website should look at different screen
             sizes. Creating these projects has helped me refine my workflow and
-            solve real-world coding problems. I've learned semothing new with
+            solve real-world coding problems. I've learned something new with
             each project, helping me to improve and adapt my style.
           </TextBlock>
         </section>

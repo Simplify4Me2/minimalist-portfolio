@@ -23,12 +23,12 @@ function Contact() {
             positive person who will always approach each task with a sense of
             purpose and attention to detail. Please do feel free to check out my
             online profiles below and get in touch using the form.
-            <SocialMediaNav className="md:pt-6" />
+            <SocialMediaNav className="pt-6" />
           </TextBlock>
         </Section>
-        <section className="flex flex-col pt-8 pb-16 font-sans font-bold text-xs tracking-wide">
-          <SectionHeader>Contact Me</SectionHeader>
-          <form className="flex flex-col mt-[0.9rem] md:mt-6">
+        <section className="flex flex-col lg:flex-row lg:w-full lg:justify-between pt-8 pb-16 lg:pb-20 font-sans font-bold text-xs tracking-wide">
+          <SectionHeader className="lg:pt-4">Contact Me</SectionHeader>
+          <form className="flex flex-col basis-full lg:max-w-[40rem] pt-[0.9rem] md:pt-6 lg:pt-1 ">
             <label className="text-[0.8rem] text-grayish-dark-blue my-4">
               Name
             </label>
@@ -74,7 +74,7 @@ function Section({
     <section
       className={`flex flex-col lg:justify-between pt-2 lg:pt-2 ${className}`}
     >
-      <div className="flex flex-col lg:flex-row lg:justify-between border-y-[0.25px] border-solid border-grayish-dark-blue/15 pt-6 md:mt-[2.35rem] md:pt-8 pb-8 md:my-0 lg:pt-12 lg:w-full">
+      <div className="flex flex-col lg:flex-row lg:justify-between border-y-[0.25px] border-solid border-grayish-dark-blue/15 pt-6 md:mt-[2.35rem] md:pt-8 pb-8 md:my-0 lg:pt-12 lg:pb-6 lg:w-full">
         <SectionHeader className="pb-0 basis-full">{title}</SectionHeader>
         {children}
       </div>

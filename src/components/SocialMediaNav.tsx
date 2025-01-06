@@ -4,13 +4,14 @@ import LinkedInIcon from "../assets/icons/linkedin.svg";
 
 interface SocialMediaNavProps {
     inverted?: boolean;
+    className?: string;
 }
 
-export function SocialMediaNav({ inverted = false }: SocialMediaNavProps) {
+export function SocialMediaNav({ inverted = false, className }: SocialMediaNavProps) {
   const iconClass = inverted ? "invert" : "";
 
     return <nav>
-    <ul className="flex gap-4 lg:items-center">
+    <ul className={`flex gap-4 lg:items-center ${className}`}>
       <li>
         <img src={GitHubIcon} className={iconClass} />
       </li>

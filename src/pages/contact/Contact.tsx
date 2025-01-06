@@ -12,7 +12,7 @@ function Contact() {
 
   return (
     <>
-      <main className="max-w-screen-md lg:max-w-screen-xl px-8 pb-4 md:px-10 lg:px-[5.25rem] lg:pt-0">
+      <main className="max-w-screen-md lg:max-w-screen-xl px-8 pb-4 md:pb-8 md:px-10 lg:px-[5.25rem] lg:pt-0">
         <Section title="Get in Touch">
           <TextBlock fontSize="[0.95rem]" tracking="tight">
             I'd love to hear about what you're working on and how I could help.
@@ -28,7 +28,7 @@ function Contact() {
         </Section>
         <section className="flex flex-col pt-8 pb-16 font-sans font-bold text-xs tracking-wide">
           <SectionHeader>Contact Me</SectionHeader>
-          <form className="flex flex-col mt-[0.9rem]">
+          <form className="flex flex-col mt-[0.9rem] md:mt-6">
             <label className="text-[0.8rem] text-grayish-dark-blue my-4">
               Name
             </label>

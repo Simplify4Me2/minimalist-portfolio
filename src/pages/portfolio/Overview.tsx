@@ -1,10 +1,11 @@
-import ManageImage from "../../assets/portfolio/mobile/image-portfolio-manage.jpg";
+// import ManageImage from "../../assets/portfolio/mobile/image-portfolio-manage.jpg";
 import BookmarkImage from "../../assets/portfolio/mobile/image-portfolio-bookmark.jpg";
 import InsureImage from "../../assets/portfolio/mobile/image-portfolio-insure.jpg";
 import FyloImage from "../../assets/portfolio/mobile/image-portfolio-fylo.jpg";
-import { Button } from "../../components";
+import { Button, SectionHeader, TextBlock } from "../../components";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import { useNavigate } from "react-router-dom";
+import { ManageImage } from "../../images";
 
 function Overview() {
   const navigate = useNavigate();
@@ -15,18 +16,24 @@ function Overview() {
     <>
       <main className="px-8">
         <section className="flex flex-col pt-2 pb-6 border-b-[0.25px] border-solid border-light-grey mb-16">
-          <img src={ManageImage} />
+          <ManageImage />
           <hr className="mt-8 mb-6 border-y-[0.25px] border-solid border-light-grey" />
-          <h1 className="font-ibarra font-bold text-4xl tracking-tight pb-6">
-            Manage
-          </h1>
-          <p className="font-publicSans text-[0.94rem] leading-[1.875rem] text-left pb-1.5">
+          <SectionHeader className="pb-6">Manage</SectionHeader>
+          <TextBlock
+            fontSize="[0.95rem]"
+            tracking="tight"
+            className="pt-0 pr-1"
+          >
             This project required me to build a fully responsive landing page to
             the designs provided. I used HTML5, along with CSS Grid and
             JavaScript for the areas that required interactivity, such as the
             testimonial slider.
-          </p>
-          <Button variant="outlined" className="mt-4 self-start" onClick={() => navigate("manage")}>
+          </TextBlock>
+          <Button
+            variant="outlined"
+            className="self-start"
+            onClick={() => navigate("manage")}
+          >
             VIEW PROJECT
           </Button>
         </section>
@@ -42,7 +49,11 @@ function Overview() {
             JavaScript for the areas that required interactivity, such as the
             features section.
           </p>
-          <Button variant="outlined" className="mt-4 self-start" onClick={() => navigate("bookmark")}>
+          <Button
+            variant="outlined"
+            className="mt-4 self-start"
+            onClick={() => navigate("bookmark")}
+          >
             VIEW PROJECT
           </Button>
         </section>
@@ -58,7 +69,11 @@ function Overview() {
             this project required was to enable the toggling of the mobile
             navigation.
           </p>
-          <Button variant="outlined" className="mt-4 self-start" onClick={() => navigate("insure")}>
+          <Button
+            variant="outlined"
+            className="mt-4 self-start"
+            onClick={() => navigate("insure")}
+          >
             VIEW PROJECT
           </Button>
         </section>
@@ -74,7 +89,11 @@ function Overview() {
             fully&#8209;responsive. I took a mobile&#8209;first approach and
             used modern CSS like Flexbox and Grid for layout purposes.
           </p>
-          <Button variant="outlined" className="mt-4 self-start" onClick={() => navigate("fylo")}>
+          <Button
+            variant="outlined"
+            className="mt-4 self-start"
+            onClick={() => navigate("fylo")}
+          >
             VIEW PROJECT
           </Button>
         </section>

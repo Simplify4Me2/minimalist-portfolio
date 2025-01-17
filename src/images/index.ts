@@ -5,6 +5,7 @@ export { BookmarkSecondPreviewImage } from "./BookmarkSecondPreviewImage";
 export { FyloHeroImage } from "./FyloHeroImage";
 export { FyloFirstPreviewImage } from "./FyloFirstPreviewImage";
 export { FyloSecondPreviewImage } from "./FyloSecondPreviewImage";
+export { HomepageHeroImage } from "./HomepageHero";
 export { InsureHeroImage } from "./InsureHeroImage";
 export { InsureFirstPreviewImage } from "./InsureFirstPreviewImage";
 export { InsureSecondPreviewImage } from "./InsureSecondPreviewImage";

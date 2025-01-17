@@ -5,7 +5,7 @@ import {
   SectionHeader,
   TextBlock,
 } from "../../components";
-import { ContactMeSection } from "../ContactMeSection";
+import { ContactSection } from "../ContactSection";
 import {
   InsureFirstPreviewImage,
   InsureHeroImage,
@@ -63,7 +63,7 @@ export function Insure() {
         nextProject="Fylo"
         nextProjectLink="/portfolio/fylo"
       />
-      <ContactMeSection className="mt-16 mb-20 px-8" />
+      <ContactSection className="mt-16 mb-20 px-8" />
     </>
   );
 }

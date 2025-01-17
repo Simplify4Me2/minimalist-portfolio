@@ -10,7 +10,7 @@ import {
   ManageHeroImage,
   ManageSecondPreviewImage,
 } from "../../images";
-import { ContactMeSection } from "../ContactMeSection";
+import { ContactSection } from "../ContactSection";
 
 export function Manage() {
   return (
@@ -63,7 +63,7 @@ export function Manage() {
         nextProject="Bookmark"
         nextProjectLink="/portfolio/bookmark"
       />
-      <ContactMeSection className="mt-16 mb-20 px-8" />
+      <ContactSection className="mt-16 mb-20 px-8" />
     </>
   );
 }

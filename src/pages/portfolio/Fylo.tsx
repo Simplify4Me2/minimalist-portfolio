@@ -10,7 +10,7 @@ import {
   FyloFirstPreviewImage,
   FyloSecondPreviewImage,
 } from "../../images";
-import { ContactMeSection } from "../ContactMeSection";
+import { ContactSection } from "../ContactSection";
 
 export function Fylo() {
   return (
@@ -63,7 +63,7 @@ export function Fylo() {
         nextProject="Manage"
         nextProjectLink="/portfolio/manage"
       />
-      <ContactMeSection className="mt-16 mb-20 px-8" />
+      <ContactSection className="mt-16 mb-20 px-8" />
     </>
   );
 }

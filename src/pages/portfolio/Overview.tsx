@@ -1,11 +1,10 @@
-// import ManageImage from "../../assets/portfolio/mobile/image-portfolio-manage.jpg";
-import BookmarkImage from "../../assets/portfolio/mobile/image-portfolio-bookmark.jpg";
 import InsureImage from "../../assets/portfolio/mobile/image-portfolio-insure.jpg";
 import FyloImage from "../../assets/portfolio/mobile/image-portfolio-fylo.jpg";
 import { Button, SectionHeader, TextBlock } from "../../components";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import { useNavigate } from "react-router-dom";
-import { ManageImage } from "../../images";
+import { BookmarkImage, ManageImage } from "../../images";
+import { PropsWithChildren } from "react";
 
 function Overview() {
   const navigate = useNavigate();
@@ -14,16 +13,10 @@ function Overview() {
 
   return (
     <>
-      <main className="px-8">
-        <section className="flex flex-col pt-2 pb-6 border-b-[0.25px] border-solid border-light-grey mb-16">
-          <ManageImage />
-          <hr className="mt-8 mb-6 border-y-[0.25px] border-solid border-light-grey" />
-          <SectionHeader className="pb-6">Manage</SectionHeader>
-          <TextBlock
-            fontSize="[0.95rem]"
-            tracking="tight"
-            className="pt-0 pr-1"
-          >
+      <main className="px-8 py-2">
+        <ManageImage />
+        <Section title="Manage">
+          <TextBlock tracking="tight" fontSize="[0.95rem]" className="pr-2">
             This project required me to build a fully responsive landing page to
             the designs provided. I used HTML5, along with CSS Grid and
             JavaScript for the areas that required interactivity, such as the
@@ -33,12 +26,11 @@ function Overview() {
             variant="outlined"
             className="self-start"
             onClick={() => navigate("manage")}
-          >
-            VIEW PROJECT
-          </Button>
-        </section>
-        <section className="flex flex-col pt-2 pb-6 border-b-[0.25px] border-solid border-light-grey mb-16">
-          <img src={BookmarkImage} />
+          >VIEW PROJECT</Button>
+        </Section>
+        
+        <section className="flex flex-col pt-[4.5rem] pb-6 border-b-[0.25px] border-solid border-light-grey mb-16">
+          <BookmarkImage />
           <hr className="mt-8 mb-6 border-y-[0.25px] border-solid border-light-grey" />
           <h1 className="font-ibarra font-bold text-4xl tracking-tight pb-6">
             Bookmark
@@ -111,3 +103,25 @@ function Overview() {
 }
 
 export default Overview;
+
+interface SectionProps {
+  title: string;
+  className?: string;
+}
+
+function Section({
+  title,
+  children,
+  className,
+}: PropsWithChildren<SectionProps>) {
+  return (
+    <section
+      className={`flex flex-col md:flex-row lg:justify-between pt-8 lg:pt-16 ${className}`}
+    >
+      <div className="flex flex-col border-y-[0.25px] border-solid border-grayish-dark-blue/15 pt-6 md:pt-12 pb-6 md:my-0 md:ml-[4.25rem] lg:mx-20 lg:pt-12 lg:w-[22.5rem]">
+        <SectionHeader>{title}</SectionHeader>
+        {children}
+      </div>
+    </section>
+  );
+}

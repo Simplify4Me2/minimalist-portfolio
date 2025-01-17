@@ -1,3 +1,4 @@
+export { BookmarkImage } from "./BookmarkImage";
 export { BookmarkHeroImage } from "./BookmarkHeroImage";
 export { BookmarkFirstPreviewImage } from "./BookmarkFirstPreviewImage";
 export { BookmarkSecondPreviewImage } from "./BookmarkSecondPreviewImage";

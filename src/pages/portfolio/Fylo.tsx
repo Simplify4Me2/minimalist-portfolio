@@ -3,7 +3,7 @@ import {
   Button,
   TextBlock,
   PortfolioNavigation,
-  SectionHeader,
+  ArticleHeader,
 } from "../../components";
 import {
   FyloHeroImage,
@@ -83,7 +83,7 @@ function Section({
       className={`flex flex-col md:flex-row lg:justify-between pt-10 lg:pt-16 ${className}`}
     >
       <div className="flex flex-col border-y-[0.25px] border-solid border-grayish-dark-blue/15 pt-6 md:pt-12 pb-7 md:my-0 md:ml-[4.25rem] lg:mx-20 lg:pt-12 lg:w-[22.5rem]">
-        <SectionHeader className="pb-5">{title}</SectionHeader>
+        <ArticleHeader className="pb-5">{title}</ArticleHeader>
         {children}
       </div>
     </section>

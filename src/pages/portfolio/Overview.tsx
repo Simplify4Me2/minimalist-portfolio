@@ -1,6 +1,6 @@
 import InsureImage from "../../assets/portfolio/mobile/image-portfolio-insure.jpg";
 import FyloImage from "../../assets/portfolio/mobile/image-portfolio-fylo.jpg";
-import { Button, SectionHeader, TextBlock } from "../../components";
+import { Button, ArticleHeader, TextBlock } from "../../components";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import { useNavigate } from "react-router-dom";
 import { BookmarkImage, ManageImage } from "../../images";
@@ -119,7 +119,7 @@ function Section({
       className={`flex flex-col md:flex-row lg:justify-between pt-8 lg:pt-16 ${className}`}
     >
       <div className="flex flex-col border-y-[0.25px] border-solid border-grayish-dark-blue/15 pt-6 md:pt-12 pb-6 md:my-0 md:ml-[4.25rem] lg:mx-20 lg:pt-12 lg:w-[22.5rem]">
-        <SectionHeader>{title}</SectionHeader>
+        <ArticleHeader>{title}</ArticleHeader>
         {children}
       </div>
     </section>

@@ -1,6 +1,6 @@
 import { memo, PropsWithChildren } from "react";
 
-const SectionHeader = memo(({ children, className }: PropsWithChildren<{ className?: string }>) => {
+const ArticleHeader = memo(({ children, className }: PropsWithChildren<{ className?: string }>) => {
     return (
       <h1 className={`font-ibarra font-bold text-4xl tracking-tight ${className}`}>
         {children}
@@ -8,4 +8,4 @@ const SectionHeader = memo(({ children, className }: PropsWithChildren<{ classNa
     );
   });
 
-  export default SectionHeader;
+  export default ArticleHeader;

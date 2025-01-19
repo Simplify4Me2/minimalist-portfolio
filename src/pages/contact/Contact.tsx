@@ -1,7 +1,7 @@
 import { PropsWithChildren } from "react";
 import {
   Button,
-  SectionHeader,
+  ArticleHeader,
   SocialMediaNav,
   TextBlock,
 } from "../../components";
@@ -27,7 +27,7 @@ function Contact() {
           </TextBlock>
         </Section>
         <section className="flex flex-col lg:flex-row lg:w-full lg:justify-between pt-8 pb-16 lg:pb-20 font-sans font-bold text-xs tracking-wide">
-          <SectionHeader className="lg:pt-4">Contact Me</SectionHeader>
+          <ArticleHeader className="lg:pt-4">Contact Me</ArticleHeader>
           <form className="flex flex-col basis-full lg:max-w-[40rem] pt-[0.9rem] md:pt-6 lg:pt-1 ">
             <label className="text-[0.8rem] text-grayish-dark-blue my-4">
               Name
@@ -75,7 +75,7 @@ function Section({
       className={`flex flex-col lg:justify-between pt-2 lg:pt-2 ${className}`}
     >
       <div className="flex flex-col lg:flex-row lg:justify-between border-y-[0.25px] border-solid border-grayish-dark-blue/15 pt-6 md:mt-[2.35rem] md:pt-8 pb-8 md:my-0 lg:pt-12 lg:pb-6 lg:w-full">
-        <SectionHeader className="pb-0 basis-full">{title}</SectionHeader>
+        <ArticleHeader className="pb-0 basis-full">{title}</ArticleHeader>
         {children}
       </div>
     </section>

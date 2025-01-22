@@ -1,8 +1,7 @@
 import { ContactSection } from "../ContactSection";
 import { useScrollToTop } from "../../hooks";
 import { HomepageHeroImage, ProfileImage } from "../../images";
-import { Button, ArticleHeader, TextBlock } from "../../components";
-import { Link } from "react-router-dom";
+import { Button, ArticleHeader, TextBlock, ProjectLink } from "../../components";
 import { PropsWithChildren } from "react";
 
 function Home() {
@@ -21,7 +20,7 @@ function Home() {
           </div>
         </section>
 
-        <section className="flex flex-col md:flex-row lg:justify-between pt-2 lg:pt-16">
+        <Section className="pt-2 lg:pt-0 lg:mt-16">
           <ProfileImage />
           <Article title="About Me">
             <TextBlock>
@@ -37,9 +36,9 @@ function Home() {
             </TextBlock>
             <ProjectLink to="/portfolio">GO TO PORTFOLIO</ProjectLink>
           </Article>
-        </section>
+        </Section>
 
-        <ContactSection className="pt-28 pb-20" />
+        <ContactSection className="pt-28 md:pt-20 pb-20 lg:mt-10 lg:mb-16" />
       </main>
     </>
   );
@@ -58,28 +57,28 @@ function Article({
   className,
 }: PropsWithChildren<ArticleProps>) {
   return (
-    <section
-      className={`flex flex-col md:flex-row lg:justify-between pt-8 md:pt-0 lg:pt-16 ${className}`}
+    <article
+      className={`flex flex-col md:flex-row lg:justify-between pt-8 md:pt-0 lg:pt-0 ${className}`}
     >
-      <div className="flex flex-col border-y-[0.25px] border-solid border-grayish-dark-blue/15 pt-8 md:pt-12 pb-7 md:my-0 md:ml-[4.25rem] lg:mx-20 lg:pt-12 lg:w-[22.5rem]">
+      <div className="flex flex-col border-y-[0.25px] border-solid border-grayish-dark-blue/15 pt-8 md:pt-12 pb-7 md:my-0 md:ml-[4.25rem] lg:pb-0 lg:mx-20 lg:pt-12 lg:w-[22.5rem]">
         <ArticleHeader className="pb-1">{title}</ArticleHeader>
         {children}
       </div>
-    </section>
+    </article>
   );
 }
 
-type ProjectLink = {
-  to: string;
-};
 
-function ProjectLink({ to, children }: PropsWithChildren<ProjectLink>) {
+
+function Section({
+  children,
+  className,
+}: PropsWithChildren<{ className?: string }>) {
   return (
-    <Link
-      to={to}
-      className="flex items-center font-publicSans text-xs tracking-[0.125rem] border-[0.5px] border-solid border-black h-12 px-8 mb-6 self-start"
+    <section
+      className={`flex flex-col md:flex-row lg:justify-between ${className}`}
     >
       {children}
-    </Link>
+    </section>
   );
 }

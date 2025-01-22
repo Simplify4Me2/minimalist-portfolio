@@ -1,10 +1,15 @@
 import InsureImage from "../../assets/portfolio/mobile/image-portfolio-insure.jpg";
 import FyloImage from "../../assets/portfolio/mobile/image-portfolio-fylo.jpg";
-import { Button, ArticleHeader, TextBlock } from "../../components";
+import {
+  Button,
+  TextBlock,
+  Section,
+  ProjectLink,
+  Article,
+} from "../../components";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import { useNavigate } from "react-router-dom";
 import { BookmarkImage, ManageImage } from "../../images";
-import { PropsWithChildren } from "react";
 
 function Overview() {
   const navigate = useNavigate();
@@ -13,22 +18,20 @@ function Overview() {
 
   return (
     <>
-      <main className="px-8 py-2">
-        <ManageImage />
-        <Section title="Manage">
-          <TextBlock tracking="tight" fontSize="[0.95rem]" className="pr-2">
-            This project required me to build a fully responsive landing page to
-            the designs provided. I used HTML5, along with CSS Grid and
-            JavaScript for the areas that required interactivity, such as the
-            testimonial slider.
-          </TextBlock>
-          <Button
-            variant="outlined"
-            className="self-start"
-            onClick={() => navigate("manage")}
-          >VIEW PROJECT</Button>
+      <main className="max-w-screen-md lg:max-w-screen-xl px-8 md:px-10 lg:px-[5.25rem] lg:pt-0">
+        <Section>
+          <ManageImage />
+          <Article title="Manage">
+            <TextBlock tracking="tight" fontSize="[0.95rem]" className="pr-2">
+              This project required me to build a fully responsive landing page
+              to the designs provided. I used HTML5, along with CSS Grid and
+              JavaScript for the areas that required interactivity, such as the
+              testimonial slider.
+            </TextBlock>
+            <ProjectLink to="manage">VIEW PROJECT</ProjectLink>
+          </Article>
         </Section>
-        
+
         <section className="flex flex-col pt-[4.5rem] pb-6 border-b-[0.25px] border-solid border-light-grey mb-16">
           <BookmarkImage />
           <hr className="mt-8 mb-6 border-y-[0.25px] border-solid border-light-grey" />
@@ -103,25 +106,3 @@ function Overview() {
 }
 
 export default Overview;
-
-interface SectionProps {
-  title: string;
-  className?: string;
-}
-
-function Section({
-  title,
-  children,
-  className,
-}: PropsWithChildren<SectionProps>) {
-  return (
-    <section
-      className={`flex flex-col md:flex-row lg:justify-between pt-8 lg:pt-16 ${className}`}
-    >
-      <div className="flex flex-col border-y-[0.25px] border-solid border-grayish-dark-blue/15 pt-6 md:pt-12 pb-6 md:my-0 md:ml-[4.25rem] lg:mx-20 lg:pt-12 lg:w-[22.5rem]">
-        <ArticleHeader>{title}</ArticleHeader>
-        {children}
-      </div>
-    </section>
-  );
-}

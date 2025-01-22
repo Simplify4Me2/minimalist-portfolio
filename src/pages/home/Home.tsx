@@ -1,8 +1,7 @@
 import { ContactSection } from "../ContactSection";
 import { useScrollToTop } from "../../hooks";
 import { HomepageHeroImage, ProfileImage } from "../../images";
-import { Button, ArticleHeader, TextBlock, ProjectLink } from "../../components";
-import { PropsWithChildren } from "react";
+import { Button, ArticleHeader, TextBlock, ProjectLink, Section, Article } from "../../components";
 
 function Home() {
   useScrollToTop();
@@ -22,7 +21,7 @@ function Home() {
 
         <Section className="pt-2 lg:pt-0 lg:mt-16">
           <ProfileImage />
-          <Article title="About Me">
+          <Article title="About Me" className="pt-8 md:pt-0 lg:pt-0">
             <TextBlock>
               I'm a junior front-end developer looking for a new role in an
               exciting company. I focus on writing accessible HTML, using modern
@@ -45,40 +44,3 @@ function Home() {
 }
 
 export default Home;
-
-interface ArticleProps {
-  title: string;
-  className?: string;
-}
-
-function Article({
-  title,
-  children,
-  className,
-}: PropsWithChildren<ArticleProps>) {
-  return (
-    <article
-      className={`flex flex-col md:flex-row lg:justify-between pt-8 md:pt-0 lg:pt-0 ${className}`}
-    >
-      <div className="flex flex-col border-y-[0.25px] border-solid border-grayish-dark-blue/15 pt-8 md:pt-12 pb-7 md:my-0 md:ml-[4.25rem] lg:pb-0 lg:mx-20 lg:pt-12 lg:w-[22.5rem]">
-        <ArticleHeader className="pb-1">{title}</ArticleHeader>
-        {children}
-      </div>
-    </article>
-  );
-}
-
-
-
-function Section({
-  children,
-  className,
-}: PropsWithChildren<{ className?: string }>) {
-  return (
-    <section
-      className={`flex flex-col md:flex-row lg:justify-between ${className}`}
-    >
-      {children}
-    </section>
-  );
-}

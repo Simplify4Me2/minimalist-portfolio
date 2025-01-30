@@ -2,14 +2,14 @@ import InsureImage from "../../assets/portfolio/mobile/image-portfolio-insure.jp
 import FyloImage from "../../assets/portfolio/mobile/image-portfolio-fylo.jpg";
 import {
   Button,
-  TextBlock,
   Section,
   ProjectLink,
-  Article,
+  ArticleHeader,
 } from "../../components";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import { useNavigate } from "react-router-dom";
 import { BookmarkImage, ManageImage } from "../../images";
+import { PropsWithChildren } from "react";
 
 function Overview() {
   const navigate = useNavigate();
@@ -18,17 +18,30 @@ function Overview() {
 
   return (
     <>
-      <main className="max-w-screen-md lg:max-w-screen-xl px-8 md:px-10 lg:px-[5.25rem] lg:pt-0">
-        <Section>
+      <main className="max-w-screen-md lg:max-w-screen-xl px-8 md:px-10 lg:px-[5.25rem] lg:pt-12">
+        <Section className="my-2 lg:mt-0">
           <ManageImage />
-          <Article title="Manage">
-            <TextBlock tracking="tight" fontSize="[0.95rem]" className="pr-2">
+          <Article title="Manage" className="mt-8 lg:mt-0">
+            <TextBlock className="pb-6">
               This project required me to build a fully responsive landing page
               to the designs provided. I used HTML5, along with CSS Grid and
               JavaScript for the areas that required interactivity, such as the
               testimonial slider.
             </TextBlock>
             <ProjectLink to="manage">VIEW PROJECT</ProjectLink>
+          </Article>
+        </Section>
+
+        <Section className="mt-[4.85rem] md:flex-row-reverse">
+          <BookmarkImage />
+          <Article title="Bookmark" className="mt-8">
+            <TextBlock className="pb-6">
+              This project required me to build a fully responsive landing page
+              to the designs provided. I used HTML5, along with CSS Grid and
+              JavaScript for the areas that required interactivity, such as the
+              features section.
+            </TextBlock>
+            <ProjectLink to="bookmark">VIEW PROJECT</ProjectLink>
           </Article>
         </Section>
 
@@ -106,3 +119,33 @@ function Overview() {
 }
 
 export default Overview;
+
+
+function Article({
+  title,
+  children,
+  className,
+}: PropsWithChildren<{ title: string; className?: string }>) {
+  return (
+    <article
+      className={`flex lg:items-center ${className}`}
+    >
+      <div className="flex flex-col h-full justify-center lg:pb-7 pt-6 lg:pt-12 md:my-0 md:ml-[4.25rem] lg:ml-32 lg:mr-24 border-y-[0.25px] border-solid border-grayish-dark-blue/15">
+        <ArticleHeader className="pb-1">{title}</ArticleHeader>
+        {children}
+      </div>
+    </article>
+  );
+}
+
+type TextBlockProps = {
+  className?: string;
+}
+
+function TextBlock({ children, className }: PropsWithChildren<TextBlockProps>) {
+  return (
+    <p className={`font-publicSans tracking-tight lg:tracking-normal text-[0.95rem] lg:text-base opacity-80 leading-[1.875rem] lg:leading-[1.875rem] text-left pt-5 lg:pt-6 pb-6 pr-2 min-h-[11.75rem] ${className}`}>
+      {children}
+    </p>
+  );
+}

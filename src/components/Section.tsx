@@ -2,7 +2,7 @@ import { PropsWithChildren } from "react";
 
 export function Section({
   children,
-  className,
+  className = '',
 }: PropsWithChildren<{ className?: string }>) {
   return (
     <section

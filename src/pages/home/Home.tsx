@@ -19,7 +19,7 @@ function Home() {
           </div>
         </section>
 
-        <Section className="pt-2 lg:pt-0 lg:mt-16">
+        <Section className="pt-2 lg:pt-0 lg:mt-16 gap-8">
           <ProfileImage />
           <Article title="About Me" className="pt-8 md:pt-0 lg:pt-0">
             <TextBlock>
@@ -37,7 +37,7 @@ function Home() {
           </Article>
         </Section>
 
-        <ContactSection className="pt-28 md:pt-20 pb-20 lg:mt-10 lg:mb-16" />
+        <ContactSection className="pt-28 md:pt-20 pb-20 lg:my-16" />
       </main>
     </>
   );

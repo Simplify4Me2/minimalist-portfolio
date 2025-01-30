@@ -8,9 +8,9 @@ export function Article({
 }: PropsWithChildren<{ title: string; className?: string }>) {
   return (
     <article
-      className={`flex flex-col md:flex-row lg:justify-between ${className}`}
+      className={`flex lg:items-center ${className}`}
     >
-      <div className="flex flex-col border-y-[0.25px] border-solid border-grayish-dark-blue/15 pt-8 md:pt-12 pb-7 md:my-0 md:ml-[4.25rem] lg:pb-0 lg:mx-20 lg:pt-12 lg:w-[22.5rem]">
+      <div className="flex flex-col h-full justify-center lg:pb-7 pt-6 lg:pt-12 md:my-0 md:ml-[4.25rem] lg:ml-24 lg:mr-24 border-y-[0.25px] border-solid border-grayish-dark-blue/15">
         <ArticleHeader className="pb-1">{title}</ArticleHeader>
         {children}
       </div>

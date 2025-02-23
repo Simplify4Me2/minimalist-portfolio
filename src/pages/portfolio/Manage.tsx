@@ -1,9 +1,9 @@
 import { PropsWithChildren } from "react";
 import {
-  Button,
   PortfolioNavigation,
   ArticleHeader,
   TextBlock,
+  ProjectLink,
 } from "../../components";
 import {
   ManageFirstPreviewImage,
@@ -15,9 +15,94 @@ import { ContactSection } from "../ContactSection";
 export function Manage() {
   return (
     <>
-      <main className="max-w-screen-md lg:max-w-screen-xl px-8 pt-2 pb-4 md:px-10 lg:px-[5.25rem] lg:pt-0">
+      <main className="max-w-screen-md lg:max-w-screen-xl px-8 md:px-10 lg:px-[5.25rem] pt-2 lg:pt-12">
         <ManageHeroImage />
-        <Section title="Manage">
+
+        <section className="mt-10 lg:mt-28 lg:grid lg:grid-cols-[22rem_auto] lg:gap-[7.5rem]">
+          <Article title="Manage" className="pr-1">
+            <TextBlock
+              fontSize="[0.95rem]"
+              tracking="tight"
+              className="opacity-80"
+            >
+                This project required me to build a fully responsive landing
+                page to the designs provided. I used HTML5, along with CSS Grid
+                and JavaScript for the areas that required interactivity, such
+                as the testimonial slider.
+            </TextBlock>
+            <Tags classname="mb-0 lg:mb-3">
+              Interaction Design / Front End Development
+            </Tags>
+            <Tags classname="mb-6 lg:mb-7">HTML / CSS / JS</Tags>
+            <ProjectLink to="manage">VISIT WEBSITE</ProjectLink>
+          </Article>
+          <section className="basis-lg pl-1">
+            <article>
+              <h2 className="font-ibarra font-medium text-[2rem] tracking-tight pt-12 lg:pt-0">
+                Project Background
+              </h2>
+              <TextBlock tracking="tight" fontSize="[0.95rem]" className="lg:pr-1">
+                This project was a front-end challenge from Frontend Mentor.
+                It's a platform that enables you to practice building websites
+                to a design and project brief. Each challenge includes mobile
+                and desktop designs to show how the website should look at
+                different screen sizes. Creating these projects has helped me
+                refine my workflow and solve real-world coding problems. I've
+                learned something new with each project, helping me to improve
+                and adapt my style.
+              </TextBlock>
+            </article>
+            <article className="pt-3">
+              <div>
+                <h2 className="font-ibarra font-medium text-[2rem] tracking-tight mb-10 lg:mb-6">
+                  Static Previews
+                </h2>
+                <div className="flex flex-col gap-8">
+                  <ManageFirstPreviewImage />
+                  <ManageSecondPreviewImage />
+                </div>
+              </div>
+            </article>
+          </section>
+        </section>
+
+        {/* <Section className="pt-10 lg:pt-28 gap-[8rem]">
+          <Article title="Manage" className="basis-md">
+            <TextBlock
+              fontSize="[0.95rem]"
+              tracking="tight"
+              className="opacity-80"
+            >
+              This project required me to build a fully responsive landing page
+              to the designs provided. I used HTML5, along with CSS Grid and
+              JavaScript for the areas that required interactivity, such as the
+              testimonial slider.
+            </TextBlock>
+            <p className="font-publicSans font-bold text-[0.805rem] text-slightly-desaturated-cyan py-[0.3rem]">
+              Interaction Design / Front End Development
+            </p>
+            <p className="font-publicSans font-bold text-[0.805rem] text-slightly-desaturated-cyan py-[0.3rem]">
+              HTML / CSS / JS
+            </p>
+            <ProjectLink to="manage">VISIT WEBSITE</ProjectLink>
+          </Article>
+          <section className="pt-11 basis-lg">
+            <h1 className="font-ibarra text-[2rem]">Project Background</h1>
+            <TextBlock tracking="tight" fontSize="[0.95rem]">
+              This project was a front-end challenge from Frontend Mentor. It's
+              a platform that enables you to practice building websites to a
+              design and project brief. Each challenge includes mobile and
+              desktop designs to show how the website should look at different
+              screen sizes. Creating these projects has helped me refine my
+              workflow and solve real-world coding problems. I've learned
+              something new with each project, helping me to improve and adapt
+              my style.
+            </TextBlock>
+            
+          </section>
+        </Section> */}
+
+        {/* <Section title="Manage">
           <p className="font-publicSans tracking-tight text-[0.95rem] leading-[1.875rem] text-left pt-[0.25rem] pr-2 pb-6 min-h-[11.75rem]">
             This project required me to build a fully responsive landing page to
             the designs provided. I used HTML5, along with CSS Grid and
@@ -33,9 +118,9 @@ export function Manage() {
           <Button variant="outlined" className="mt-6 mb-0 self-start">
             VISIT WEBSITE
           </Button>
-        </Section>
-        
-        <section className="pt-11">
+        </Section> */}
+
+        {/* <section className="pt-11">
           <h1 className="font-ibarra text-[2rem]">Project Background</h1>
           <TextBlock tracking="tight" fontSize="[0.95rem]">
             This project was a front-end challenge from Frontend Mentor. It's a
@@ -54,38 +139,44 @@ export function Manage() {
             <ManageFirstPreviewImage />
             <ManageSecondPreviewImage />
           </div>
-        </section>
-      </main>
+        </section> */}
 
-      <PortfolioNavigation
-        previousProject="Fylo"
-        previousProjectLink="/portfolio/fylo"
-        nextProject="Bookmark"
-        nextProjectLink="/portfolio/bookmark"
-      />
-      <ContactSection className="mt-16 mb-20 px-8" />
+        <PortfolioNavigation
+          previousProject="Fylo"
+          previousProjectLink="/portfolio/fylo"
+          nextProject="Bookmark"
+          nextProjectLink="/portfolio/bookmark"
+        />
+        <ContactSection className="mt-16 mb-20 px-8" />
+      </main>
     </>
   );
 }
 
-interface SectionProps {
-  title: string;
-  className?: string;
+function Tags({
+  children,
+  classname,
+}: PropsWithChildren<{ classname?: string }>) {
+  return (
+    <p
+      className={`font-publicSans font-bold text-[0.805rem] lg:text-base text-slightly-desaturated-cyan py-[0.3rem] ${classname}`}
+    >
+      {children}
+    </p>
+  );
 }
 
-function Section({
+export function Article({
   title,
   children,
   className,
-}: PropsWithChildren<SectionProps>) {
+}: PropsWithChildren<{ title: string; className?: string }>) {
   return (
-    <section
-      className={`flex flex-col md:flex-row lg:justify-between pt-10 lg:pt-16 ${className}`}
-    >
-      <div className="flex flex-col border-y-[0.25px] border-solid border-grayish-dark-blue/15 pt-6 md:pt-12 pb-7 md:my-0 md:ml-[4.25rem] lg:mx-20 lg:pt-12 lg:w-[22.5rem]">
-        <ArticleHeader className="pb-5">{title}</ArticleHeader>
+    <article className={`flex lg:items-center ${className}`}>
+      <div className="flex flex-col h-full justify-start lg:pb-7 pt-6 lg:pt-12 md:my-0 md:ml-[4.25rem] lg:ml-0 border-y-[0.25px] border-solid border-grayish-dark-blue/15">
+        <ArticleHeader className="pb-1">{title}</ArticleHeader>
         {children}
       </div>
-    </section>
+    </article>
   );
 }

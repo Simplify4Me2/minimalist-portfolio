@@ -16,7 +16,7 @@ export function PortfolioNavigation({
   nextProjectLink,
 }: PortfolioNavigationProps) {
   return (
-    <nav className="max-w-screen-md lg:max-w-screen-xl flex w-full px-6 lg:px-[5.25rem] mt-[4.25rem] lg:mt-16 ">
+    <nav className="max-w-screen-md lg:max-w-screen-xl flex w-full px-6 lg:px-[5.25rem] mt-[4.25rem] lg:mt-16 lg:mb-[6.5rem] ">
       <Link
         to={previousProjectLink}
         className="flex-1 lg:flex lg:justify-start lg:items-center border-black border-grayish-dark-blue/[.15] border-y-[1px]"

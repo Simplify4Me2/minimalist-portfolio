@@ -76,7 +76,7 @@ export function Manage() {
         nextProject="Bookmark"
         nextProjectLink="/portfolio/bookmark"
       />
-      <ContactSection className="mt-16 mb-20 px-8" />
+      <ContactSection className="mt-16 mb-20 lg:mb-[9.5rem] px-8 lg:px-0" />
     </>
   );
 }

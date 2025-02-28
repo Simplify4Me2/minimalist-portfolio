@@ -4,6 +4,7 @@ import {
   ArticleHeader,
   TextBlock,
   ProjectLink,
+  Tags,
 } from "../../components";
 import {
   ManageFirstPreviewImage,
@@ -78,19 +79,6 @@ export function Manage() {
       />
       <ContactSection className="mt-16 mb-20 lg:mb-[9.5rem] px-8 lg:px-0" />
     </>
-  );
-}
-
-function Tags({
-  children,
-  classname,
-}: PropsWithChildren<{ classname?: string }>) {
-  return (
-    <p
-      className={`font-publicSans font-bold text-[0.805rem] lg:text-base text-slightly-desaturated-cyan py-[0.3rem] ${classname}`}
-    >
-      {children}
-    </p>
   );
 }
 

@@ -1,81 +1,86 @@
-import { PropsWithChildren } from "react";
-import { Button, PortfolioNavigation, ArticleHeader, TextBlock } from "../../components";
-import { BookmarkFirstPreviewImage, BookmarkHeroImage, BookmarkSecondPreviewImage } from "../../images";
+import {
+  PortfolioNavigation,
+  TextBlock,
+  Article,
+  Tags,
+  ProjectLink,
+} from "../../components";
+import {
+  BookmarkFirstPreviewImage,
+  BookmarkHeroImage,
+  BookmarkSecondPreviewImage,
+} from "../../images";
 import { ContactSection } from "../ContactSection";
 
 export function Bookmark() {
-    return <>
-    <main className="max-w-screen-md lg:max-w-screen-xl px-8 pt-2 pb-4 md:px-10 lg:px-[5.25rem] lg:pt-0">
-      <BookmarkHeroImage />
-      <Section title="Bookmark">
-        <p className="font-publicSans tracking-tight text-[0.95rem] leading-[1.875rem] text-left pt-[0.25rem] pr-2 pb-6 min-h-[11.75rem]">
-          This project required me to build a fully responsive landing page to
-          the designs provided. I used HTML5, along with CSS Grid and
-          JavaScript for the areas that required interactivity, such as the
-          features section.
-        </p>
-        <p className="font-publicSans font-bold text-[0.805rem] text-slightly-desaturated-cyan py-[0.3rem]">
-          Interaction Design / Front End Development
-        </p>
-        <p className="font-publicSans font-bold text-[0.805rem] text-slightly-desaturated-cyan py-[0.3rem]">
-          HTML / CSS / JS
-        </p>
-        <Button variant="outlined" className="mt-6 mb-0 self-start">
-          VISIT WEBSITE
-        </Button>
-      </Section>
-
-      <section className="pt-11">
-        <h1 className="font-ibarra text-[2rem]">Project Background</h1>
-        <TextBlock tracking="tight" fontSize="[0.95rem]">
-          This project was a front-end challenge from Frontend Mentor. It's a
-          platform that enables you to practice building websites to a design
-          and project brief. Each challenge includes mobile and desktop
-          designs to show how the website should look at different screen
-          sizes. Creating these projects has helped me refine my workflow and
-          solve real-world coding problems. I've learned something new with
-          each project, helping me to improve and adapt my style.
-        </TextBlock>
-      </section>
-
-      <section className="pt-3">
-        <h1 className="font-ibarra text-[2rem] mb-10">Static Previews</h1>
-        <div className="flex flex-col gap-8">
-          <BookmarkFirstPreviewImage />
-          <BookmarkSecondPreviewImage />
-        </div>
-      </section>
-    </main>
-
-    <PortfolioNavigation
-            previousProject="Manage"
-            previousProjectLink="/portfolio/manage"
-            nextProject="Insure"
-            nextProjectLink="/portfolio/insure"
-          />
-
-    <ContactSection className="mt-16 mb-20 px-8" />
-  </>
-}
-
-interface SectionProps {
-  title: string;
-  className?: string;
-}
-
-function Section({
-  title,
-  children,
-  className,
-}: PropsWithChildren<SectionProps>) {
   return (
-    <section
-      className={`flex flex-col md:flex-row lg:justify-between pt-10 lg:pt-16 ${className}`}
-    >
-      <div className="flex flex-col border-y-[0.25px] border-solid border-grayish-dark-blue/15 pt-6 md:pt-12 pb-7 md:my-0 md:ml-[4.25rem] lg:mx-20 lg:pt-12 lg:w-[22.5rem]">
-        <ArticleHeader className="pb-5">{title}</ArticleHeader>
-        {children}
-      </div>
-    </section>
+    <>
+      <main className="max-w-screen-md lg:max-w-screen-xl px-8 md:px-10 lg:px-[5.25rem] pt-2 lg:pt-12">
+        <BookmarkHeroImage />
+
+        <section className="mt-10 lg:mt-28 lg:grid lg:grid-cols-[22rem_auto] lg:gap-[7.5rem]">
+          <Article title="Manage" className="pr-1 items-start">
+            <TextBlock
+              fontSize="[0.95rem]"
+              tracking="tight"
+              className="opacity-80"
+            >
+              This project required me to build a fully responsive landing page
+              to the designs provided. I used HTML5, along with CSS Grid and
+              JavaScript for the areas that required interactivity, such as the
+              features section.
+            </TextBlock>
+            <Tags classname="mb-0 lg:mb-3">
+              Interaction Design / Front End Development
+            </Tags>
+            <Tags classname="mb-6 lg:mb-7">HTML / CSS / JS</Tags>
+            <ProjectLink to="bookmark">VISIT WEBSITE</ProjectLink>
+          </Article>
+
+          <section className="basis-lg lg:pl-1">
+            <article>
+              <h2 className="font-ibarra font-medium text-[2rem] tracking-tight pt-12 lg:pt-0">
+                Project Background
+              </h2>
+              <TextBlock
+                tracking="tight"
+                fontSize="[0.95rem]"
+                className="lg:pr-1 opacity-80"
+              >
+                This project was a front-end challenge from Frontend Mentor.
+                It's a platform that enables you to practice building websites
+                to a design and project brief. Each challenge includes mobile
+                and desktop designs to show how the website should look at
+                different screen sizes. Creating these projects has helped me
+                refine my workflow and solve real-world coding problems. I've
+                learned something new with each project, helping me to improve
+                and adapt my style.
+              </TextBlock>
+            </article>
+
+            <article className="pt-3">
+              <div>
+                <h2 className="font-ibarra font-medium text-[2rem] tracking-tight mb-10 lg:mb-6">
+                  Static Previews
+                </h2>
+                <div className="flex flex-col gap-8">
+                  <BookmarkFirstPreviewImage />
+                  <BookmarkSecondPreviewImage />
+                </div>
+              </div>
+            </article>
+          </section>
+        </section>
+      </main>
+
+      <PortfolioNavigation
+        previousProject="Manage"
+        previousProjectLink="/portfolio/manage"
+        nextProject="Insure"
+        nextProjectLink="/portfolio/insure"
+      />
+
+      <ContactSection className="mt-16 mb-20 lg:mb-[9.5rem] px-8 lg:px-0" />
+    </>
   );
 }

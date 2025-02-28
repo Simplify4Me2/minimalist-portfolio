@@ -16,7 +16,7 @@ function Overview() {
     <main className="max-w-screen-md lg:max-w-screen-xl px-8 md:px-10 lg:px-[5.25rem] lg:pt-12">
       <Section className="my-2 lg:mt-0 gap-8">
         <ManageImage />
-        <Article title="Manage">
+        <Article title="Manage" className="lg:items-center">
           <TextBlock className="pb-6">
             This project required me to build a fully responsive landing page to
             the designs provided. I used HTML5, along with CSS Grid and
@@ -29,7 +29,7 @@ function Overview() {
 
       <Section className="mt-[4.5rem] lg:mt-[4.85rem] gap-8 md:flex-row-reverse">
         <BookmarkImage />
-        <Article title="Bookmark">
+        <Article title="Bookmark" className="lg:items-center">
           <TextBlock className="pb-6 pr-2">
             This project required me to build a fully responsive landing page to
             the designs provided. I used HTML5, along with CSS Grid and
@@ -42,7 +42,7 @@ function Overview() {
 
       <Section className="mt-[4.5rem] lg:mt-20 gap-8">
         <InsureImage />
-        <Article title="Insure">
+        <Article title="Insure" className="lg:items-center">
           <TextBlock className="pb-6">
             This was a small project which mostly consisted of HTML and CSS. I
             built a fully&#8209;responsive landing page. The only JavaScript
@@ -55,7 +55,7 @@ function Overview() {
 
       <Section className="mt-[4.5rem] lg:mt-20 gap-8 md:flex-row-reverse">
         <FyloImage />
-        <Article title="Fylo">
+        <Article title="Fylo" className="lg:items-center">
           <TextBlock className="pb-6 pr-0">
             This project was built in pure HTML and CSS. I had mobile and
             desktop designs to work to and built it so that it was

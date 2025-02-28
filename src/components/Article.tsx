@@ -7,8 +7,8 @@ export function Article({
   className,
 }: PropsWithChildren<{ title: string; className?: string }>) {
   return (
-    <article className={`flex lg:items-center ${className}`}>
-      <div className="flex flex-col h-full justify-start lg:pb-7 pt-6 lg:pt-12 md:my-0 md:ml-[4.25rem] lg:ml-0 border-y-[0.25px] border-solid border-grayish-dark-blue/15">
+    <article className={`flex ${className}`}>
+      <div className="flex flex-col  justify-start lg:pb-7 pt-6 lg:pt-12 md:my-0 md:ml-[4.25rem] lg:ml-0 border-y-[0.25px] border-solid border-grayish-dark-blue/15">
         <ArticleHeader className="pb-1">{title}</ArticleHeader>
         {children}
       </div>

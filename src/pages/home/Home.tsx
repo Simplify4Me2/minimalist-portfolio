@@ -21,7 +21,7 @@ function Home() {
 
         <Section className="pt-2 lg:pt-0 lg:mt-16 gap-8">
           <ProfileImage />
-          <Article title="About Me" className="pt-8 md:pt-0 lg:pt-0">
+          <Article title="About Me" className="pt-8 md:pt-0 lg:pt-0 lg:items-center">
             <TextBlock>
               I'm a junior front-end developer looking for a new role in an
               exciting company. I focus on writing accessible HTML, using modern

@@ -19,7 +19,7 @@ export function Manage() {
         <ManageHeroImage />
 
         <section className="mt-10 lg:mt-28 lg:grid lg:grid-cols-[22rem_auto] lg:gap-[7.5rem]">
-          <Article title="Manage" className="pr-1">
+          <Article title="Manage" className="pr-1 items-start">
             <TextBlock
               fontSize="[0.95rem]"
               tracking="tight"

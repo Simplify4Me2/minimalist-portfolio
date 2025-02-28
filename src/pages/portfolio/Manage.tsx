@@ -4,6 +4,8 @@ import {
   ProjectLink,
   Tags,
   Article,
+  StaticPreviews,
+  ProjectBackground,
 } from "../../components";
 import {
   ManageFirstPreviewImage,
@@ -37,36 +39,20 @@ export function Manage() {
             <ProjectLink to="manage">VISIT WEBSITE</ProjectLink>
           </Article>
           <section className="basis-lg lg:pl-1">
-            <article>
-              <h2 className="font-ibarra font-medium text-[2rem] tracking-tight pt-12 lg:pt-0">
-                Project Background
-              </h2>
-              <TextBlock
-                tracking="tight"
-                fontSize="[0.95rem]"
-                className="lg:pr-1 opacity-80"
-              >
-                This project was a front-end challenge from Frontend Mentor.
-                It's a platform that enables you to practice building websites
-                to a design and project brief. Each challenge includes mobile
-                and desktop designs to show how the website should look at
-                different screen sizes. Creating these projects has helped me
-                refine my workflow and solve real-world coding problems. I've
-                learned something new with each project, helping me to improve
-                and adapt my style.
-              </TextBlock>
-            </article>
-            <article className="pt-3">
-              <div>
-                <h2 className="font-ibarra font-medium text-[2rem] tracking-tight mb-10 lg:mb-6">
-                  Static Previews
-                </h2>
-                <div className="flex flex-col gap-8">
-                  <ManageFirstPreviewImage />
-                  <ManageSecondPreviewImage />
-                </div>
-              </div>
-            </article>
+            <ProjectBackground>
+              This project was a front-end challenge from Frontend Mentor. It's
+              a platform that enables you to practice building websites to a
+              design and project brief. Each challenge includes mobile and
+              desktop designs to show how the website should look at different
+              screen sizes. Creating these projects has helped me refine my
+              workflow and solve real-world coding problems. I've learned
+              something new with each project, helping me to improve and adapt
+              my style.
+            </ProjectBackground>
+            <StaticPreviews>
+              <ManageFirstPreviewImage />
+              <ManageSecondPreviewImage />
+            </StaticPreviews>
           </section>
         </section>
       </main>

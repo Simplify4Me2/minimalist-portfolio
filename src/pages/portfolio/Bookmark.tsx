@@ -22,24 +22,36 @@ export function Bookmark() {
         <BookmarkHeroImage />
 
         <section className="mt-10 lg:mt-28 lg:grid lg:grid-cols-[22rem_auto] lg:gap-[7.5rem]">
-          <Article className="pr-1 items-start">
-            <ArticleHeader className="pb-1">Bookmark</ArticleHeader>
+          <ProjectArticle className="items-start ">
+            <div>
+              <ArticleHeader className="pb-1">Bookmark</ArticleHeader>
+              <TextBlock
+                fontSize="[0.95rem]"
+                tracking="tight"
+                className="opacity-80 md:hidden lg:block"
+              >
+                This project required me to build a fully responsive landing
+                page to the designs provided. I used HTML5, along with CSS Grid
+                and JavaScript for the areas that required interactivity, such
+                as the features section.
+              </TextBlock>
+              <Tags classname="mb-0 md:mt-3 lg:mb-3">
+                Interaction Design / Front End Development
+              </Tags>
+              <Tags classname="mb-6 md:mb-4 lg:mb-7">HTML / CSS / JS</Tags>
+              <ProjectLink to="bookmark">VISIT WEBSITE</ProjectLink>
+            </div>
             <TextBlock
-              fontSize="[0.95rem]"
-              tracking="tight"
-              className="opacity-80"
-            >
-              This project required me to build a fully responsive landing page
-              to the designs provided. I used HTML5, along with CSS Grid and
-              JavaScript for the areas that required interactivity, such as the
-              features section.
-            </TextBlock>
-            <Tags classname="mb-0 lg:mb-3">
-              Interaction Design / Front End Development
-            </Tags>
-            <Tags classname="mb-6 lg:mb-7">HTML / CSS / JS</Tags>
-            <ProjectLink to="bookmark">VISIT WEBSITE</ProjectLink>
-          </Article>
+                fontSize="[0.95rem]"
+                tracking="tight"
+                className="opacity-80 hidden md:block lg:hidden pt-0 pb-2"
+              >
+                This project required me to build a fully responsive landing
+                page to the designs provided. I used HTML5, along with CSS Grid
+                and JavaScript for the areas that required interactivity, such
+                as the features section.
+              </TextBlock>
+          </ProjectArticle>
 
           <section className="basis-lg lg:pl-1">
             <ProjectBackground>
@@ -72,13 +84,13 @@ export function Bookmark() {
   );
 }
 
-function Article({
+function ProjectArticle({
   children,
   className,
 }: PropsWithChildren<{ className?: string }>) {
   return (
     <article className={`flex ${className}`}>
-      <div className="flex flex-col flex-1 justify-start lg:pb-7 pt-6 md:pt-8 lg:pt-12 border-y-[0.25px] border-solid border-grayish-dark-blue/15">
+      <div className="flex flex-col md:grid md:grid-cols-2 lg:flex lg:flex-col flex-1 justify-start md:pb-2 lg:pb-7 pt-6 md:pt-8 lg:pt-12 border-y-[0.25px] border-solid border-grayish-dark-blue/15">
         {children}
       </div>
     </article>

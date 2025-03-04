@@ -4,7 +4,7 @@ import { TextBlock } from "./TextBlock";
 export function ProjectBackground({ children }: PropsWithChildren) {
   return (
     <article>
-      <h2 className="font-ibarra font-medium text-[2rem] tracking-tight pt-12 lg:pt-0">
+      <h2 className="font-ibarra font-medium text-[2rem] tracking-tight pt-12 md:pt-9 md:pb-1 lg:py-0">
         Project Background
       </h2>
       <TextBlock

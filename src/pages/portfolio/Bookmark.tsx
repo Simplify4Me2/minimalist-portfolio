@@ -1,11 +1,12 @@
+import { PropsWithChildren } from "react";
 import {
   PortfolioNavigation,
   TextBlock,
-  Article,
   Tags,
   ProjectLink,
   ProjectBackground,
   StaticPreviews,
+  ArticleHeader,
 } from "../../components";
 import {
   BookmarkFirstPreviewImage,
@@ -17,11 +18,12 @@ import { ContactSection } from "../ContactSection";
 export function Bookmark() {
   return (
     <>
-      <main className="max-w-screen-md lg:max-w-screen-xl px-8 md:px-10 lg:px-[5.25rem] pt-2 lg:pt-12">
+      <main className="max-w-screen-md lg:max-w-screen-xl px-8 md:px-10 lg:px-[5.25rem] pt-2 md:pt-12">
         <BookmarkHeroImage />
 
         <section className="mt-10 lg:mt-28 lg:grid lg:grid-cols-[22rem_auto] lg:gap-[7.5rem]">
-          <Article title="Bookmark" className="pr-1 items-start">
+          <Article className="pr-1 items-start">
+            <ArticleHeader className="pb-1">Bookmark</ArticleHeader>
             <TextBlock
               fontSize="[0.95rem]"
               tracking="tight"
@@ -67,5 +69,18 @@ export function Bookmark() {
 
       <ContactSection className="mt-16 mb-20 lg:mb-[9.5rem] px-8 lg:px-0" />
     </>
+  );
+}
+
+function Article({
+  children,
+  className,
+}: PropsWithChildren<{ className?: string }>) {
+  return (
+    <article className={`flex ${className}`}>
+      <div className="flex flex-col flex-1 justify-start lg:pb-7 pt-6 md:pt-8 lg:pt-12 border-y-[0.25px] border-solid border-grayish-dark-blue/15">
+        {children}
+      </div>
+    </article>
   );
 }

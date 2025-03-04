@@ -8,7 +8,7 @@ export function Article({
 }: PropsWithChildren<{ title: string; className?: string }>) {
   return (
     <article className={`flex ${className}`}>
-      <div className="flex flex-col  justify-start lg:pb-7 pt-6 lg:pt-12 md:my-0 md:ml-[4.25rem] lg:ml-0 border-y-[0.25px] border-solid border-grayish-dark-blue/15">
+      <div className="flex flex-col flex-1 justify-start lg:pb-7 pt-6 md:pt-8 lg:pt-12 border-y-[0.25px] border-solid border-grayish-dark-blue/15">
         <ArticleHeader className="pb-1">{title}</ArticleHeader>
         {children}
       </div>

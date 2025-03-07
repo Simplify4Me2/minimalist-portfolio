@@ -7,8 +7,8 @@ import {
   TextBlock,
   ProjectLink,
   Section,
-  Article,
 } from "../../components";
+import { PropsWithChildren } from "react";
 
 function Home() {
   useScrollToTop();
@@ -28,20 +28,23 @@ function Home() {
 
         <Section className="pt-2 lg:pt-0 lg:mt-16 gap-8">
           <ProfileImage />
-          <Article title="About Me" className="lg:px-24">
-            <TextBlock>
-              I'm a junior front-end developer looking for a new role in an
-              exciting company. I focus on writing accessible HTML, using modern
-              CSS practices and writing clean JavaScript. When writing
-              JavaScript code, I mostly use React, but I can adapt to whatever
-              tools are required. I'm based in London, UK, but I'm happy working
-              remotely and have experience in remote teams. When I'm not coding,
-              you'll find me outdoors. I love being out in nature whether that's
-              going for a walk, run or cycling. I'd love you to check out my
-              work.
-            </TextBlock>
-            <ProjectLink to="/portfolio">GO TO PORTFOLIO</ProjectLink>
-          </Article>
+          <article className="flex lg:px-24">
+            <div className="flex flex-col flex-1 justify-start lg:pb-7 pt-[1.9rem] md:pl-9 lg:pl-0 md:pt-12 border-y-[0.25px] border-solid border-grayish-dark-blue/15">
+              <ArticleHeader className="pb-2">About Me</ArticleHeader>
+              <TextBlock>
+                I'm a junior front-end developer looking for a new role in an
+                exciting company. I focus on writing accessible HTML, using
+                modern CSS practices and writing clean JavaScript. When writing
+                JavaScript code, I mostly use React, but I can adapt to whatever
+                tools are required. I'm based in London, UK, but I'm happy
+                working remotely and have experience in remote teams. When I'm
+                not coding, you'll find me outdoors. I love being out in nature
+                whether that's going for a walk, run or cycling. I'd love you to
+                check out my work.
+              </TextBlock>
+              <ProjectLink to="/portfolio">GO TO PORTFOLIO</ProjectLink>
+            </div>
+          </article>
         </Section>
 
         <ContactSection className="pt-36 md:pt-[5.5rem] lg:pt-20 pb-20 lg:my-16" />
@@ -51,3 +54,18 @@ function Home() {
 }
 
 export default Home;
+
+function Article({
+  children,
+  className,
+  title,
+}: PropsWithChildren<{ title: string; className?: string }>) {
+  return (
+    <article className={`flex ${className}`}>
+      <div className="flex flex-col flex-1 justify-start lg:pb-7 pt-[1.9rem] md:pl-9 lg:pl-0 md:pt-12 border-y-[0.25px] border-solid border-grayish-dark-blue/15">
+        <ArticleHeader className="pb-1">{title}</ArticleHeader>
+        {children}
+      </div>
+    </article>
+  );
+}

@@ -3,9 +3,10 @@ import {
   TextBlock,
   ProjectLink,
   Tags,
-  Article,
   StaticPreviews,
   ProjectBackground,
+  ArticleHeader,
+  ProjectArticle,
 } from "../../components";
 import {
   ManageFirstPreviewImage,
@@ -21,7 +22,8 @@ export function Manage() {
         <ManageHeroImage />
 
         <section className="mt-10 lg:mt-28 lg:grid lg:grid-cols-[22rem_auto] lg:gap-[7.5rem]">
-          <Article title="Manage" className="pr-1 items-start">
+          <ProjectArticle className="pr-1 items-start">
+            <ArticleHeader className="pb-1">Manage</ArticleHeader>
             <TextBlock
               fontSize="[0.95rem]"
               tracking="tight"
@@ -37,7 +39,7 @@ export function Manage() {
             </Tags>
             <Tags classname="mb-6 lg:mb-7">HTML / CSS / JS</Tags>
             <ProjectLink to="manage">VISIT WEBSITE</ProjectLink>
-          </Article>
+          </ProjectArticle>
           <section className="basis-lg lg:pl-1">
             <ProjectBackground>
               This project was a front-end challenge from Frontend Mentor. It's

@@ -1,4 +1,3 @@
-import { PropsWithChildren } from "react";
 import {
   PortfolioNavigation,
   TextBlock,
@@ -7,6 +6,7 @@ import {
   ProjectBackground,
   StaticPreviews,
   ArticleHeader,
+  ProjectArticle,
 } from "../../components";
 import {
   BookmarkFirstPreviewImage,
@@ -81,18 +81,5 @@ export function Bookmark() {
 
       <ContactSection className="mt-16 mb-20 lg:mb-[9.5rem] px-8 lg:px-0" />
     </>
-  );
-}
-
-function ProjectArticle({
-  children,
-  className,
-}: PropsWithChildren<{ className?: string }>) {
-  return (
-    <article className={`flex ${className}`}>
-      <div className="flex flex-col md:grid md:grid-cols-2 lg:flex lg:flex-col flex-1 justify-start md:pb-2 lg:pb-7 pt-6 md:pt-8 lg:pt-12 border-y-[0.25px] border-solid border-grayish-dark-blue/15">
-        {children}
-      </div>
-    </article>
   );
 }

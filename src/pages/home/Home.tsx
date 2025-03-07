@@ -1,7 +1,14 @@
 import { ContactSection } from "../ContactSection";
 import { useScrollToTop } from "../../hooks";
 import { HomepageHeroImage, ProfileImage } from "../../images";
-import { Button, ArticleHeader, TextBlock, ProjectLink, Section, Article } from "../../components";
+import {
+  Button,
+  ArticleHeader,
+  TextBlock,
+  ProjectLink,
+  Section,
+  Article,
+} from "../../components";
 
 function Home() {
   useScrollToTop();
@@ -21,7 +28,7 @@ function Home() {
 
         <Section className="pt-2 lg:pt-0 lg:mt-16 gap-8">
           <ProfileImage />
-          <Article title="About Me" className="pt-8 md:pt-0 lg:pt-0 lg:items-center">
+          <Article title="About Me" className="lg:px-24">
             <TextBlock>
               I'm a junior front-end developer looking for a new role in an
               exciting company. I focus on writing accessible HTML, using modern
@@ -37,7 +44,7 @@ function Home() {
           </Article>
         </Section>
 
-        <ContactSection className="pt-28 md:pt-20 pb-20 lg:my-16" />
+        <ContactSection className="pt-36 md:pt-[5.5rem] lg:pt-20 pb-20 lg:my-16" />
       </main>
     </>
   );

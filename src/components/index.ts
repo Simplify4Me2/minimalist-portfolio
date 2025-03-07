@@ -2,6 +2,7 @@ export { Article } from "./Article";
 export { default as ArticleHeader } from "./ArticleHeader";
 export { Button } from "./Button";
 export { PortfolioNavigation } from "./PortfolioNavigation";
+export { ProjectArticle } from "./ProjectArticle";
 export { ProjectBackground } from "./ProjectBackground";
 export { ProjectLink } from "./ProjectLink";
 export { Section } from "./Section";

@@ -1,4 +1,4 @@
-import { Section, ProjectLink, Article } from "../../components";
+import { Section, ProjectLink, ArticleHeader } from "../../components";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import {
   BookmarkImage,
@@ -14,9 +14,9 @@ function Overview() {
 
   return (
     <main className="max-w-screen-md lg:max-w-screen-xl px-8 md:px-10 lg:px-[5.25rem] lg:pt-12">
-      <Section className="my-2 lg:mt-0 gap-8">
+      <Section className="my-2 md:my-8 lg:mt-0 gap-8">
         <ManageImage />
-        <Article title="Manage" className="lg:items-center">
+        <Article title="Manage" className="pt-0 md:pt-4 md:px-4">
           <TextBlock className="pb-6">
             This project required me to build a fully responsive landing page to
             the designs provided. I used HTML5, along with CSS Grid and
@@ -84,5 +84,20 @@ function TextBlock({ children, className }: PropsWithChildren<TextBlockProps>) {
     >
       {children}
     </p>
+  );
+}
+
+function Article({
+  children,
+  className,
+  title,
+}: PropsWithChildren<{ title: string; className?: string }>) {
+  return (
+    <article className={`flex ${className}`}>
+      <div className="flex flex-col flex-1 justify-start lg:pb-7 pt-6 md:pl-9 lg:pl-0 md:pt-12 border-y-[0.25px] border-solid border-grayish-dark-blue/15">
+        <ArticleHeader className="pb-1">{title}</ArticleHeader>
+        {children}
+      </div>
+    </article>
   );
 }

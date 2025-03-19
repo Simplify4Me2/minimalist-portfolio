@@ -5,11 +5,11 @@ import { Image } from "./Image";
 
 export function ManageImage() {
   return (
-    <Image
-      mobileImage={MobileImage}
-      tabletImage={TabletImage}
-      desktopImage={DesktopImage}
-      alt="Manage"
-    />
+      <Image
+        mobileImage={MobileImage}
+        tabletImage={TabletImage}
+        desktopImage={DesktopImage}
+        alt="Manage"
+      />
   );
 }

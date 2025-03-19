@@ -29,7 +29,7 @@ function Home() {
         <Section className="pt-2 lg:pt-0 lg:mt-16 gap-8">
           <ProfileImage />
           <article className="flex lg:px-24">
-            <div className="flex flex-col flex-1 justify-start lg:pb-7 pt-[1.9rem] md:pl-9 lg:pl-0 md:pt-12 border-y-[0.25px] border-solid border-grayish-dark-blue/15">
+            <div className="flex flex-col flex-1 justify-start pb-[1.65rem] lg:pb-5 pt-[1.9rem] md:ml-9 lg:ml-0 md:pt-12 border-y-[0.25px] border-solid border-grayish-dark-blue/15">
               <ArticleHeader className="pb-2">About Me</ArticleHeader>
               <TextBlock>
                 I'm a junior front-end developer looking for a new role in an
@@ -47,7 +47,7 @@ function Home() {
           </article>
         </Section>
 
-        <ContactSection className="pt-36 md:pt-[5.5rem] lg:pt-20 pb-20 lg:my-16" />
+        <ContactSection className="pt-[7.15rem] md:pt-20 pb-20 lg:my-[4.25rem]" />
       </main>
     </>
   );

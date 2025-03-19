@@ -16,8 +16,8 @@ function Overview() {
     <main className="max-w-screen-md lg:max-w-screen-xl px-8 md:px-10 lg:px-[5.25rem] lg:pt-12">
       <Section className="my-2 md:my-8 lg:mt-0 gap-8">
         <ManageImage />
-        <Article title="Manage" className="pt-0 md:pt-4 md:px-4">
-          <TextBlock className="pb-6">
+        <Article title="Manage" className="pt-0 lg:pt-4 lg:px-4">
+          <TextBlock className="pb-6 md:pb-10">
             This project required me to build a fully responsive landing page to
             the designs provided. I used HTML5, along with CSS Grid and
             JavaScript for the areas that required interactivity, such as the

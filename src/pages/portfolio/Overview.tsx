@@ -17,7 +17,7 @@ function Overview() {
       <Section className="my-2 md:my-8 lg:mt-0 gap-8">
         <ManageImage />
         <Article title="Manage" className="pt-0 lg:pt-4 lg:px-4">
-          <TextBlock className="pb-6 md:pb-10">
+          <TextBlock className="pb-6 pr-2 md:pb-10">
             This project required me to build a fully responsive landing page to
             the designs provided. I used HTML5, along with CSS Grid and
             JavaScript for the areas that required interactivity, such as the
@@ -43,7 +43,7 @@ function Overview() {
       <Section className="mt-[4.5rem] lg:mt-20 gap-8">
         <InsureImage />
         <Article title="Insure" className="lg:items-center">
-          <TextBlock className="pb-6">
+          <TextBlock className="pb-[3.3rem] md:pb-6">
             This was a small project which mostly consisted of HTML and CSS. I
             built a fully&#8209;responsive landing page. The only JavaScript
             this project required was to enable the toggling of the mobile
@@ -56,7 +56,7 @@ function Overview() {
       <Section className="mt-[4.5rem] lg:mt-20 gap-8 md:flex-row-reverse">
         <FyloImage />
         <Article title="Fylo" className="lg:items-center">
-          <TextBlock className="pb-6 pr-0">
+          <TextBlock className="pb-6 md:pr-2">
             This project was built in pure HTML and CSS. I had mobile and
             desktop designs to work to and built it so that it was
             fully&#8209;responsive. I took a mobile&#8209;first approach and
@@ -80,7 +80,7 @@ type TextBlockProps = {
 function TextBlock({ children, className }: PropsWithChildren<TextBlockProps>) {
   return (
     <p
-      className={`font-publicSans tracking-tight lg:tracking-normal text-[0.95rem] lg:text-base opacity-80 leading-[1.875rem] lg:leading-[1.875rem] text-left pt-5 lg:pt-6 pb-6 pr-2 min-h-[11.75rem] ${className}`}
+      className={`font-publicSans tracking-tight lg:tracking-normal text-[0.95rem] lg:text-base opacity-80 leading-[1.875rem] lg:leading-[1.875rem] text-left pt-5 lg:pt-6 pb-6 min-h-[11.75rem] ${className}`}
     >
       {children}
     </p>

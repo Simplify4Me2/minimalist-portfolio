@@ -18,7 +18,7 @@ import { ContactSection } from "../ContactSection";
 export function Manage() {
   return (
     <>
-      <main className="max-w-screen-md lg:max-w-screen-xl px-8 md:px-10 lg:px-[5.25rem] pt-2 lg:pt-12">
+      <main className="max-w-screen-md lg:max-w-screen-xl px-8 md:px-10 lg:px-[5.25rem] pt-2 md:pt-12">
         <ManageHeroImage />
 
         <section className="mt-10 lg:mt-28 lg:grid lg:grid-cols-[22rem_auto] lg:gap-[7.5rem]">

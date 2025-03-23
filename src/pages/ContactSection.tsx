@@ -7,7 +7,7 @@ type ContactSectionProps = {
 export function ContactSection({ className }: ContactSectionProps) {
   return (
     <section
-      className={`flex flex-col md:flex-row md:justify-between md:items-center md:mt-2 md:mb-4 text-center ${className}`}
+      className={`flex flex-col md:flex-row md:justify-between md:items-center text-center ${className}`}
     >
       <span className="font-ibarra font-bold text-4xl tracking-tight md:w-[20.5rem] md:text-left md:mr-6 lg:mr-0">
         Interested in doing a project together?

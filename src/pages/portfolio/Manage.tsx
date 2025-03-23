@@ -1,6 +1,7 @@
+import { PropsWithChildren } from "react";
 import {
   PortfolioNavigation,
-  TextBlock,
+  // TextBlock,
   ProjectLink,
   Tags,
   StaticPreviews,
@@ -22,24 +23,37 @@ export function Manage() {
         <ManageHeroImage />
 
         <section className="mt-10 lg:mt-28 lg:grid lg:grid-cols-[22rem_auto] lg:gap-[7.5rem]">
-          <ProjectArticle className="pr-1 items-start">
-            <ArticleHeader className="pb-1">Manage</ArticleHeader>
+          <ProjectArticle className="items-start ">
+            <div>
+              <ArticleHeader className="pb-1">Manage</ArticleHeader>
+              <TextBlock
+                fontSize="[0.95rem]"
+                tracking="tight"
+                className="opacity-80 md:hidden lg:block pt-[1.35rem] lg:pt-6 pb-6"
+              >
+                This project required me to build a fully responsive landing page
+                to the designs provided. I used HTML5, along with CSS Grid and
+                JavaScript for the areas that required interactivity, such as the
+                testimonial slider.
+              </TextBlock>
+              <Tags classname="mb-0 md:mt-3 lg:mb-3">
+                Interaction Design / Front End Development
+              </Tags>
+              <Tags classname="mb-6 md:mb-4 lg:mb-7">HTML / CSS / JS</Tags>
+              <ProjectLink to="manage">VISIT WEBSITE</ProjectLink>
+            </div>
             <TextBlock
               fontSize="[0.95rem]"
               tracking="tight"
-              className="opacity-80"
+              className="opacity-80 hidden md:block lg:hidden pb-2 lg:pt-6 md:pl-1"
             >
               This project required me to build a fully responsive landing page
               to the designs provided. I used HTML5, along with CSS Grid and
               JavaScript for the areas that required interactivity, such as the
               testimonial slider.
             </TextBlock>
-            <Tags classname="mb-0 lg:mb-3">
-              Interaction Design / Front End Development
-            </Tags>
-            <Tags classname="mb-6 lg:mb-7">HTML / CSS / JS</Tags>
-            <ProjectLink to="manage">VISIT WEBSITE</ProjectLink>
           </ProjectArticle>
+
           <section className="basis-lg lg:pl-1">
             <ProjectBackground>
               This project was a front-end challenge from Frontend Mentor. It's
@@ -68,3 +82,18 @@ export function Manage() {
     </>
   );
 }
+
+
+type TextBlockProps = {
+    className?: string;
+    tracking?: "tight" | "normal";
+    fontSize?: "[0.95rem]" | "sm" | "base";
+  }
+  
+  export function TextBlock({ children, className, tracking = "normal", fontSize = "base" }: PropsWithChildren<TextBlockProps>) {
+    return (
+      <p className={`font-publicSans tracking-${tracking} text-${fontSize} leading-[1.875rem] text-left min-h-[11.75rem] ${className}`}>
+        {children}
+      </p>
+    );
+  }

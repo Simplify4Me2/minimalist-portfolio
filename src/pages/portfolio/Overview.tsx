@@ -14,7 +14,7 @@ function Overview() {
 
   return (
     <main className="max-w-screen-md lg:max-w-screen-xl px-8 md:px-10 lg:px-[5.25rem] lg:pt-12">
-      <Section className="my-2 md:mt-[2.8rem] md:mb-8 lg:mt-0 gap-8">
+      <Section className="mt-2 md:mt-[2.8rem] md:mb-10 lg:mt-0 gap-8">
         <ManageImage />
         <Article title="Manage" className="lg:px-24">
           <TextBlock className="pr-2 md:pr-0 md:pb-[2.15rem] lg:pb-6">
@@ -25,6 +25,20 @@ function Overview() {
           </TextBlock>
           <ProjectLink to="manage">VIEW PROJECT</ProjectLink>
         </Article>
+      </Section>
+
+      <Section className="mt-[4.5rem] md:mt-20 md:mb-8 lg:mt-20 gap-8 md:flex-row-reverse">
+        <BookmarkImage />
+        <article className="flex lg:mx-24 flex-col flex-1 justify-start lg:pb-7 md:mr-9 pt-6 md:pt-8 lg:pt-[6.25rem] md:pb-[1.6rem] border-y-[0.25px] border-solid border-grayish-dark-blue/15">
+            <ArticleHeader className="pb-1">Bookmark</ArticleHeader>
+            <TextBlock className="pr-2 md:pr-0 md:pb-[2.15rem] lg:pb-6">
+            This project required me to build a fully responsive landing page to
+            the designs provided. I used HTML5, along with CSS Grid and
+            JavaScript for the areas that required interactivity, such as the
+            features section.
+          </TextBlock>
+          <ProjectLink to="bookmark">VIEW PROJECT</ProjectLink>
+        </article>
       </Section>
 
       <Section className="mt-[4.5rem] lg:mt-[4.85rem] gap-8 md:flex-row-reverse">
@@ -94,6 +108,8 @@ function Article({
 }: PropsWithChildren<{ title: string; className?: string }>) {
   return (
     <article className={`flex ${className}`}>
+      {/* <article className="flex lg:mx-24 flex-col flex-1 justify-start lg:pb-7 md:mr-9 pt-6 md:pt-8 lg:pt-[6.25rem] md:pb-[1.6rem] border-y-[0.25px] border-solid border-grayish-dark-blue/15">
+      </article> */}
       <div className="flex flex-col flex-1 justify-start lg:pb-7 md:ml-9 lg:ml-0 pt-6 md:pt-8 lg:pt-[6.25rem] md:pb-[1.6rem] border-y-[0.25px] border-solid border-grayish-dark-blue/15">
         <ArticleHeader className="pb-1">{title}</ArticleHeader>
         {children}

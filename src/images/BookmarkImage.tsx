@@ -9,7 +9,7 @@ export function BookmarkImage() {
       mobileImage={MobileImage}
       tabletImage={TabletImage}
       desktopImage={DesktopImage}
-      alt="Bookmark"
+      alt="Bookmark image"
     />
   );
 }

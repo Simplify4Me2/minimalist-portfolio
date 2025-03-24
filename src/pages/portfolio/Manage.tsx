@@ -36,7 +36,7 @@ export function Manage() {
                 JavaScript for the areas that required interactivity, such as the
                 testimonial slider.
               </TextBlock>
-              <Tags classname="mb-0 md:mt-3 lg:mb-3">
+              <Tags classname="mb-0 md:mt-3 lg:mt-0 lg:mb-3">
                 Interaction Design / Front End Development
               </Tags>
               <Tags classname="mb-6 md:mb-4 lg:mb-7">HTML / CSS / JS</Tags>
@@ -78,22 +78,22 @@ export function Manage() {
         nextProject="Bookmark"
         nextProjectLink="/portfolio/bookmark"
       />
-      <ContactSection className="mt-16 mb-20 lg:mb-[9.5rem] px-8 lg:px-0" />
+      <ContactSection className="mt-16 md:mt-20 lg:mt-3 mb-20 md:mb-24 lg:mb-[9.5rem] px-8 md:px-0" />
     </>
   );
 }
 
 
 type TextBlockProps = {
-    className?: string;
-    tracking?: "tight" | "normal";
-    fontSize?: "[0.95rem]" | "sm" | "base";
-  }
-  
-  export function TextBlock({ children, className, tracking = "normal", fontSize = "base" }: PropsWithChildren<TextBlockProps>) {
-    return (
-      <p className={`font-publicSans tracking-${tracking} text-${fontSize} leading-[1.875rem] text-left min-h-[11.75rem] ${className}`}>
-        {children}
-      </p>
-    );
-  }
+  className?: string;
+  tracking?: "tight" | "normal";
+  fontSize?: "[0.95rem]" | "sm" | "base";
+}
+
+export function TextBlock({ children, className, tracking = "normal", fontSize = "base" }: PropsWithChildren<TextBlockProps>) {
+  return (
+    <p className={`font-publicSans tracking-${tracking} text-${fontSize} leading-[1.875rem] text-left min-h-[11.75rem] ${className}`}>
+      {children}
+    </p>
+  );
+}

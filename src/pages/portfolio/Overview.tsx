@@ -40,7 +40,7 @@ function Overview() {
         </Article>
       </Section>
 
-      <Section className="mt-20 gap-8">
+      <Section className="mt-[4.5rem] md:mt-20 gap-8">
         <InsureImage />
         <Article title="Insure" className="lg:mx-24 md:pb-[1.6rem] lg:pb-7 md:ml-9 pt-6 md:pt-8 lg:pt-[6.25rem]">
           <TextBlock className="pr-2 md:pr-0 md:pb-8 lg:pb-6">
@@ -66,7 +66,7 @@ function Overview() {
         </Article>
       </Section>
 
-      <ContactSection className="my-24 lg:my-[9.5rem]" />
+      <ContactSection className="my-20 md:my-24 lg:my-[9.5rem]" />
     </main>
   );
 }

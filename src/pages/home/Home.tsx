@@ -46,7 +46,7 @@ function Home() {
           </article>
         </Section>
 
-        <ContactSection className="pt-[7.15rem] md:pt-[5.5rem] pb-20 md:pb-24 lg:my-[4.25rem]" />
+        <ContactSection className="pt-[7.15rem] md:pt-[5.5rem] pb-20 md:pb-24 lg:mt-16 lg:mb-12" />
       </main>
     </>
   );

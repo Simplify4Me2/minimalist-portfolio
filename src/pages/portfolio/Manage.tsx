@@ -29,7 +29,7 @@ export function Manage() {
               <TextBlock
                 fontSize="[0.95rem]"
                 tracking="tight"
-                className="opacity-80 md:hidden lg:block pt-[1.35rem] lg:pt-6 pb-6"
+                className="opacity-80 md:hidden lg:block pt-[1.35rem] pr-1 lg:pt-6 pb-6"
               >
                 This project required me to build a fully responsive landing page
                 to the designs provided. I used HTML5, along with CSS Grid and

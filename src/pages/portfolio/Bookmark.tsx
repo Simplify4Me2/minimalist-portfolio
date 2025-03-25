@@ -28,29 +28,29 @@ export function Bookmark() {
               <TextBlock
                 fontSize="[0.95rem]"
                 tracking="tight"
-                className="opacity-80 md:hidden lg:block pt-[1.35rem] lg:pt-6 pb-6"
+                className="opacity-80 md:hidden lg:block pt-[1.35rem] pr-1 lg:pt-6 pb-6"
               >
                 This project required me to build a fully responsive landing
                 page to the designs provided. I used HTML5, along with CSS Grid
                 and JavaScript for the areas that required interactivity, such
                 as the features section.
               </TextBlock>
-              <Tags classname="mb-0 md:mt-3 lg:mb-3">
+              <Tags classname="mb-0 md:mt-3 lg:mt-0 lg:mb-3">
                 Interaction Design / Front End Development
               </Tags>
               <Tags classname="mb-6 md:mb-4 lg:mb-7">HTML / CSS / JS</Tags>
               <ProjectLink to="bookmark">VISIT WEBSITE</ProjectLink>
             </div>
             <TextBlock
-                fontSize="[0.95rem]"
-                tracking="tight"
-                className="opacity-80 hidden md:block lg:hidden pt-0 pb-2 pt-[1.35rem] lg:pt-6"
-              >
-                This project required me to build a fully responsive landing
-                page to the designs provided. I used HTML5, along with CSS Grid
-                and JavaScript for the areas that required interactivity, such
-                as the features section.
-              </TextBlock>
+              fontSize="[0.95rem]"
+              tracking="tight"
+              className="opacity-80 hidden md:block lg:hidden pb-2 lg:pt-6 md:pl-1"
+            >
+              This project required me to build a fully responsive landing
+              page to the designs provided. I used HTML5, along with CSS Grid
+              and JavaScript for the areas that required interactivity, such
+              as the features section.
+            </TextBlock>
           </ProjectArticle>
 
           <section className="basis-lg lg:pl-1">
@@ -71,15 +71,13 @@ export function Bookmark() {
           </section>
         </section>
       </main>
-
       <PortfolioNavigation
         previousProject="Manage"
         previousProjectLink="/portfolio/manage"
         nextProject="Insure"
         nextProjectLink="/portfolio/insure"
       />
-
-      <ContactSection className="mt-16 mb-20 lg:mb-[9.5rem] px-8 lg:px-0" />
+      <ContactSection className="mt-16 md:mt-20 lg:mt-3 mb-20 md:mb-24 lg:mb-[9.5rem] px-8 md:px-0" />
     </>
   );
 }

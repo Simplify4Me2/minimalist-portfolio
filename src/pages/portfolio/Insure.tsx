@@ -1,9 +1,12 @@
-import { PropsWithChildren } from "react";
 import {
-  Button,
   PortfolioNavigation,
   ArticleHeader,
   TextBlock,
+  ProjectArticle,
+  Tags,
+  ProjectLink,
+  ProjectBackground,
+  StaticPreviews,
 } from "../../components";
 import { ContactSection } from "../ContactSection";
 import {
@@ -15,77 +18,66 @@ import {
 export function Insure() {
   return (
     <>
-      <main className="max-w-screen-md lg:max-w-screen-xl px-8 pt-2 pb-4 md:px-10 lg:px-[5.25rem] lg:pt-0">
+      <main className="max-w-screen-md lg:max-w-screen-xl px-8 md:px-10 lg:px-[5.25rem] pt-2 md:pt-12">
         <InsureHeroImage />
-        <Section title="Insure">
-          <p className="font-publicSans tracking-tight text-[0.95rem] leading-[1.875rem] text-left pt-[0.25rem] pr-2 pb-6 min-h-[11.75rem]">
-            This was a small project which mostly consisted of HTML and CSS. I
-            built a fully&#8209;responsive landing page. The only JavaScript this
-            project required was to enable the toggling of the mobile
-            navigation.
-          </p>
-          <p className="font-publicSans font-bold text-[0.805rem] text-slightly-desaturated-cyan py-[0.3rem]">
-            Interaction Design / Front End Development
-          </p>
-          <p className="font-publicSans font-bold text-[0.805rem] text-slightly-desaturated-cyan py-[0.3rem]">
-            HTML / CSS / JS
-          </p>
-          <Button variant="outlined" className="mt-6 mb-0 self-start">
-            VISIT WEBSITE
-          </Button>
-        </Section>
 
-        <section className="pt-11">
-          <h1 className="font-ibarra text-[2rem]">Project Background</h1>
-          <TextBlock tracking="tight" fontSize="[0.95rem]" className="pt-[1.35rem] lg:pt-6 pb-6">
-            This project was a front-end challenge from Frontend Mentor. It's a
-            platform that enables you to practice building websites to a design
-            and project brief. Each challenge includes mobile and desktop
-            designs to show how the website should look at different screen
-            sizes. Creating these projects has helped me refine my workflow and
-            solve real-world coding problems. I've learned something new with
-            each project, helping me to improve and adapt my style.
-          </TextBlock>
-        </section>
+        <section className="mt-10 lg:mt-28 lg:grid lg:grid-cols-[22rem_auto] lg:gap-[7.5rem]">
+          <ProjectArticle className="items-start ">
+            <div>
+              <ArticleHeader className="pb-1">Insure</ArticleHeader>
+              <TextBlock
+                fontSize="[0.95rem]"
+                tracking="tight"
+                className="opacity-80 md:hidden lg:block pt-[1.35rem] pr-1 lg:pt-6 pb-6"
+              >
+                This was a small project which mostly consisted of HTML and CSS. I
+                built a fully&#8209;responsive landing page. The only JavaScript this
+                project required was to enable the toggling of the mobile
+                navigation.
+              </TextBlock>
+              <Tags classname="mb-0 md:mt-3 lg:mt-0 lg:mb-3">
+                Interaction Design / Front End Development
+              </Tags>
+              <Tags classname="mb-6 md:mb-4 lg:mb-7">HTML / CSS / JS</Tags>
+              <ProjectLink to="insure">VISIT WEBSITE</ProjectLink>
+            </div>
+            <TextBlock
+              fontSize="[0.95rem]"
+              tracking="tight"
+              className="opacity-80 hidden md:block lg:hidden pb-2 lg:pt-6 md:pl-1"
+            >
+              This was a small project which mostly consisted of HTML and CSS. I
+              built a fully&#8209;responsive landing page. The only JavaScript this
+              project required was to enable the toggling of the mobile
+              navigation.
+            </TextBlock>
+          </ProjectArticle>
 
-        <section className="pt-3">
-          <h1 className="font-ibarra text-[2rem] mb-10">Static Previews</h1>
-          <div className="flex flex-col gap-8">
-            <InsureFirstPreviewImage />
-            <InsureSecondPreviewImage />
-          </div>
+          <section className="basis-lg lg:pl-1">
+            <ProjectBackground>
+              This project was a front-end challenge from Frontend Mentor. It's a
+              platform that enables you to practice building websites to a design
+              and project brief. Each challenge includes mobile and desktop
+              designs to show how the website should look at different screen
+              sizes. Creating these projects has helped me refine my workflow and
+              solve real-world coding problems. I've learned something new with
+              each project, helping me to improve and adapt my style.
+            </ProjectBackground>
+            <StaticPreviews>
+              <InsureFirstPreviewImage />
+              <InsureSecondPreviewImage />
+            </StaticPreviews>
+          </section>
         </section>
       </main>
-
       <PortfolioNavigation
         previousProject="Bookmark"
         previousProjectLink="/portfolio/bookmark"
         nextProject="Fylo"
         nextProjectLink="/portfolio/fylo"
       />
-      <ContactSection className="mt-16 mb-20 px-8" />
+      <ContactSection className="mt-16 md:mt-20 lg:mt-3 mb-20 md:mb-24 lg:mb-[9.5rem] px-8 md:px-0" />
     </>
   );
 }
 
-interface SectionProps {
-  title: string;
-  className?: string;
-}
-
-function Section({
-  title,
-  children,
-  className,
-}: PropsWithChildren<SectionProps>) {
-  return (
-    <section
-      className={`flex flex-col md:flex-row lg:justify-between pt-10 lg:pt-16 ${className}`}
-    >
-      <div className="flex flex-col border-y-[0.25px] border-solid border-grayish-dark-blue/15 pt-6 md:pt-12 pb-7 md:my-0 md:ml-[4.25rem] lg:mx-20 lg:pt-12 lg:w-[22.5rem]">
-        <ArticleHeader className="pb-5">{title}</ArticleHeader>
-        {children}
-      </div>
-    </section>
-  );
-}

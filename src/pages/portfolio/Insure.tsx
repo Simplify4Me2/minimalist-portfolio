@@ -37,7 +37,7 @@ export function Insure() {
 
         <section className="pt-11">
           <h1 className="font-ibarra text-[2rem]">Project Background</h1>
-          <TextBlock tracking="tight" fontSize="[0.95rem]">
+          <TextBlock tracking="tight" fontSize="[0.95rem]" className="pt-[1.35rem] lg:pt-6 pb-6">
             This project was a front-end challenge from Frontend Mentor. It's a
             platform that enables you to practice building websites to a design
             and project brief. Each challenge includes mobile and desktop

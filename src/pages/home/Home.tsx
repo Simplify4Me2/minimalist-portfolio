@@ -30,7 +30,7 @@ function Home() {
           <article className="flex lg:px-24">
             <div className="flex flex-col flex-1 justify-start pb-[1.65rem] lg:pb-5 pt-[1.9rem] md:ml-9 lg:ml-0 md:pt-12 border-y-[0.25px] border-solid border-grayish-dark-blue/15">
               <ArticleHeader className="pb-2">About Me</ArticleHeader>
-              <TextBlock>
+              <TextBlock className="pt-[1.35rem] lg:pt-6 pb-6">
                 I'm a junior front-end developer looking for a new role in an
                 exciting company. I focus on writing accessible HTML, using
                 modern CSS practices and writing clean JavaScript. When writing

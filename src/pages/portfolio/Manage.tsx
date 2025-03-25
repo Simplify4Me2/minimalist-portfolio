@@ -1,7 +1,6 @@
-import { PropsWithChildren } from "react";
 import {
   PortfolioNavigation,
-  // TextBlock,
+  TextBlock,
   ProjectLink,
   Tags,
   StaticPreviews,
@@ -80,20 +79,5 @@ export function Manage() {
       />
       <ContactSection className="mt-16 md:mt-20 lg:mt-3 mb-20 md:mb-24 lg:mb-[9.5rem] px-8 md:px-0" />
     </>
-  );
-}
-
-
-type TextBlockProps = {
-  className?: string;
-  tracking?: "tight" | "normal";
-  fontSize?: "[0.95rem]" | "sm" | "base";
-}
-
-export function TextBlock({ children, className, tracking = "normal", fontSize = "base" }: PropsWithChildren<TextBlockProps>) {
-  return (
-    <p className={`font-publicSans tracking-${tracking} text-${fontSize} leading-[1.875rem] text-left min-h-[11.75rem] ${className}`}>
-      {children}
-    </p>
   );
 }

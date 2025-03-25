@@ -10,7 +10,7 @@ export function ProjectBackground({ children }: PropsWithChildren) {
       <TextBlock
         tracking="tight"
         fontSize="[0.95rem]"
-        className="lg:pr-1 opacity-80"
+        className="pt-[1.35rem] lg:pt-6 pb-6 lg:pr-1 opacity-80"
       >
         {children}
       </TextBlock>

@@ -15,8 +15,8 @@ export function Button({
 }: PropsWithChildren<IButtonProps>) {
   if (variant === "contained-with-down-arrow")
     return (
-      <button className="flex items-center h-12 w-[12.5rem] bg-dark-blue">
-        <img src={DownArrowsIcon} className="h-full p-4 bg-dark-blue" />
+      <button className="flex items-center h-12 w-[12.5rem] bg-dark-blue hover:bg-slightly-desaturated-cyan group">
+        <img src={DownArrowsIcon} className="h-full p-4 group-hover:filter group-hover:invert" />
         <p className="font-publicSans w-full text-white text-xs font-extralight tracking-[0.15rem]">
           {children}
         </p>

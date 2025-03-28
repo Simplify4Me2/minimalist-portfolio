@@ -55,7 +55,11 @@ function Contact() {
               className="bg-light-grey h-24 mb-6 p-4 placeholder:opacity-40"
               placeholder="How can I help?"
             />
-            <Button variant="contained">SEND MESSAGE</Button>
+            <Button onClick={() => {}}>
+              <p className="font-publicSans w-full text-white text-xs font-extralight tracking-[0.15rem]">
+                SEND MESSAGE
+              </p>
+            </Button>
           </form>
         </section>
       </main>

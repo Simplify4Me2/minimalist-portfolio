@@ -1,6 +1,8 @@
 import { ContactSection } from "../ContactSection";
 import { useScrollToTop } from "../../hooks";
 import { HomepageHeroImage, ProfileImage } from "../../images";
+import DownArrowsIcon from '../../assets/icons/down-arrows.svg';
+import WhiteDownArrowsIcon from '../../assets/icons/white-down-arrows.svg';
 import {
   Button,
   ArticleHeader,
@@ -21,7 +23,13 @@ function Home() {
             <ArticleHeader className="grow pt-6 md:pt-14 pb-[1.85rem] max-w-md md:w-3/4 lg:text-[3.1rem] lg:leading-[3.1rem] lg:w-[24.5rem] lg:pt-16 lg:pb-14 lg:tracking-normal">
               Hey, I&rsquo;m Alex Spencer and I love building beautiful websites
             </ArticleHeader>
-            <Button variant="contained-with-down-arrow">ABOUT ME</Button>
+            <Button onClick={() => {}} className="group">
+              <img src={DownArrowsIcon} className="h-full p-4 group-hover:filter group-hover:hidden" />
+              <img src={WhiteDownArrowsIcon} className="h-full p-4 hidden group-hover:filter group-hover:inline-block" />
+              <p className="font-publicSans w-full text-white text-xs font-extralight tracking-[0.15rem]">
+                ABOUT ME
+              </p>
+            </Button>
           </div>
         </section>
 

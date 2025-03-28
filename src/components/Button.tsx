@@ -3,7 +3,7 @@ import DownArrowsIcon from "./../assets/icons/down-arrows.svg";
 import WhiteDownArrowsIcon from "./../assets/icons/white-down-arrows.svg";
 
 interface IButtonProps {
-  variant: "contained" | "contained-with-down-arrow" | "outlined";
+  variant: "contained" | "contained-with-down-arrow";
   className?: string;
   onClick?: () => void;
 }
@@ -25,22 +25,11 @@ export function Button({
       </button>
     );
 
-  if (variant === "contained")
-    return (
-      <button className="flex items-center h-12 w-[12.5rem] bg-dark-blue">
-        <p className="font-publicSans w-full text-white text-xs font-extralight tracking-[0.15rem]">
-          {children}
-        </p>
-      </button>
-    );
-
   return (
-    <button
-      role="link"
-      onClick={onClick}
-      className={`font-publicSans text-xs tracking-[0.125rem] border-[0.5px] border-solid border-black h-12 px-8 ${className}`}
-    >
-      {children}
+    <button className="flex items-center h-12 w-[12.5rem] bg-dark-blue hover:bg-slightly-desaturated-cyan">
+      <p className="font-publicSans w-full text-white text-xs font-extralight tracking-[0.15rem]">
+        {children}
+      </p>
     </button>
   );
 }

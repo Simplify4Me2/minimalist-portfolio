@@ -23,7 +23,7 @@ function Overview() {
             JavaScript for the areas that required interactivity, such as the
             testimonial slider.
           </TextBlock>
-          <ProjectLink to="manage">VIEW PROJECT</ProjectLink>
+          <ProjectLink to="manage" className="mb-6">VIEW PROJECT</ProjectLink>
         </Article>
       </Section>
 
@@ -36,7 +36,7 @@ function Overview() {
             JavaScript for the areas that required interactivity, such as the
             features section.
           </TextBlock>
-          <ProjectLink to="bookmark">VIEW PROJECT</ProjectLink>
+          <ProjectLink to="bookmark" className="mb-6">VIEW PROJECT</ProjectLink>
         </Article>
       </Section>
 
@@ -49,7 +49,7 @@ function Overview() {
             this project required was to enable the toggling of the mobile
             navigation.
           </TextBlock>
-          <ProjectLink to="insure">VIEW PROJECT</ProjectLink>
+          <ProjectLink to="insure" className="mb-6">VIEW PROJECT</ProjectLink>
         </Article>
       </Section>
 
@@ -62,7 +62,7 @@ function Overview() {
             fully&#8209;responsive. I took a mobile&#8209;first approach and
             used modern CSS like Flexbox and Grid for layout purposes.
           </TextBlock>
-          <ProjectLink to="fylo">VIEW PROJECT</ProjectLink>
+          <ProjectLink to="fylo" className="mb-6">VIEW PROJECT</ProjectLink>
         </Article>
       </Section>
 

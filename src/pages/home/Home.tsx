@@ -41,7 +41,7 @@ function Home() {
                 whether that's going for a walk, run or cycling. I'd love you to
                 check out my work.
               </TextBlock>
-              <ProjectLink to="/portfolio">GO TO PORTFOLIO</ProjectLink>
+              <ProjectLink to="/portfolio" className="mb-6">GO TO PORTFOLIO</ProjectLink>
             </div>
           </article>
         </Section>

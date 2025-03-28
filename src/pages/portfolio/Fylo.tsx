@@ -39,7 +39,7 @@ export function Fylo() {
                 Interaction Design / Front End Development
               </Tags>
               <Tags classname="mb-6 md:mb-4 lg:mb-7">HTML / CSS</Tags>
-              <ProjectLink to="fylo">VISIT WEBSITE</ProjectLink>
+              <ProjectLink to="fylo" className="mb-6">VISIT WEBSITE</ProjectLink>
             </div>
             <TextBlock
               fontSize="[0.95rem]"

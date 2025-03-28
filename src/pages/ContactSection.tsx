@@ -1,4 +1,4 @@
-import { Button } from "../components";
+import { ProjectLink } from "../components";
 
 type ContactSectionProps = {
   className?: string;
@@ -13,12 +13,7 @@ export function ContactSection({ className }: ContactSectionProps) {
         Interested in doing a project together?
       </span>
       <hr className="hidden md:block md:w-28 lg:w-[35rem] mt-8 mb-6 md:mx-7 border-y-[0.25px] border-solid border-grayish-dark-blue/15" />
-      <Button
-        variant="outlined"
-        className="mt-10 md:mt-0 self-center text-nowrap"
-      >
-        CONTACT ME
-      </Button>
+      <ProjectLink to="/contact" className="self-center mt-10 md:mt-0">CONTACT ME</ProjectLink>
     </section>
   );
 }

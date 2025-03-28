@@ -13,7 +13,7 @@ export function ContactSection({ className }: ContactSectionProps) {
         Interested in doing a project together?
       </span>
       <hr className="hidden md:block md:w-28 lg:w-[35rem] mt-8 mb-6 md:mx-7 border-y-[0.25px] border-solid border-grayish-dark-blue/15" />
-      <ProjectLink to="/contact" className="self-center mt-10 md:mt-0">CONTACT ME</ProjectLink>
+      <ProjectLink to="/contact" className="self-center mt-10 md:mt-0 text-nowrap">CONTACT ME</ProjectLink>
     </section>
   );
 }

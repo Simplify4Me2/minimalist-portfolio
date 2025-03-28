@@ -37,7 +37,7 @@ function Contact() {
             </label>
             <input
               type="text"
-              className="bg-light-grey h-12 mb-4 p-4 placeholder:opacity-40"
+              className="bg-light-grey h-12 mb-4 p-4 focus:outline-slightly-desaturated-cyan placeholder:opacity-40 "
               placeholder="Jane Appleseed"
             />
             <label className="text-[0.8rem] text-grayish-dark-blue my-3">
@@ -45,14 +45,14 @@ function Contact() {
             </label>
             <input
               type="text"
-              className="bg-light-grey h-12 mb-4 p-4 placeholder:opacity-40"
+              className="bg-light-grey h-12 mb-4 p-4 focus:outline-slightly-desaturated-cyan placeholder:opacity-40"
               placeholder="email@example.com"
             />
             <label className="text-[0.8rem] text-grayish-dark-blue my-4">
               Message
             </label>
             <textarea
-              className="bg-light-grey h-24 mb-6 p-4 placeholder:opacity-40"
+              className="bg-light-grey h-24 mb-6 p-4 focus:outline-slightly-desaturated-cyan placeholder:opacity-40"
               placeholder="How can I help?"
             />
             <Button onClick={() => {}}>
